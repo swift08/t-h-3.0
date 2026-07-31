@@ -531,8 +531,3 @@
     .pin-pulse{animation:none; opacity:0;}
     .reveal, .reveal-stagger > *{opacity:1; transform:none; transition:none;}
   }
-
-
-  .reveal, .reveal-stagger > *{opacity:1 !important; transform:none !important;}
-  .mobile-drawer{display:none !important;}
-  .mobile-cta{display:none !important;}
