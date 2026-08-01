@@ -10,7 +10,6 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -37,9 +36,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -77,21 +73,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Trust and Hope Rad Pvt. Ltd." },
+      { name: "description", content: "Trust and Hope Rad Pvt. Ltd. | Teleradiology, Read Right." },
+      { name: "author", content: "Trust and Hope Rad Pvt. Ltd." },
+      { property: "og:title", content: "Trust and Hope Rad Pvt. Ltd." },
+      { property: "og:description", content: "Trust and Hope Rad Pvt. Ltd. | Teleradiology, Read Right." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "icon", href: "/favicon.webp", type: "image/webp" },
     ],
   }),
   shellComponent: RootShell,
@@ -117,8 +112,43 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
+  useEffect(() => {
+    import("../lib/stats-store").then(({ updateStatsInDOM, STATS_UPDATED_EVENT }) => {
+      updateStatsInDOM();
+      const handleUpdate = () => updateStatsInDOM();
+      window.addEventListener(STATS_UPDATED_EVENT, handleUpdate);
+      window.addEventListener("storage", handleUpdate);
+      return () => {
+        window.removeEventListener(STATS_UPDATED_EVENT, handleUpdate);
+        window.removeEventListener("storage", handleUpdate);
+      };
+    });
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
+      {/* Invisible link for CMS route, not indexed */}
+      <a
+        href="/stats"
+        rel="nofollow"
+        aria-hidden="true"
+        tabIndex={-1}
+        style={{
+          position: "absolute",
+          width: "1px",
+          height: "1px",
+          padding: 0,
+          margin: "-1px",
+          overflow: "hidden",
+          clip: "rect(0, 0, 0, 0)",
+          whiteSpace: "nowrap",
+          border: 0,
+          opacity: 0,
+          pointerEvents: "auto",
+        }}
+      >
+        https://trustandhoperad.com/stats
+      </a>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>

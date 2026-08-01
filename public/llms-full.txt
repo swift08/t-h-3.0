@@ -1,0 +1,33 @@
+# Trust and Hope Rad Pvt. Ltd. (TAH RAD) | Full Specification
+
+## Company Overview
+- **Legal Entity Name**: Trust and Hope Rad Pvt. Ltd.
+- **Brand Name**: TAH RAD
+- **Official Website**: https://trustandhoperad.com
+- **Industry**: Healthcare, Medical Imaging, Teleradiology
+- **Primary Market**: India (Pan-India Coverage)
+- **Specialization**: 24/7/365 Remote Radiology Reporting Services
+
+## Key Operating Statistics
+- **Centres Served**: 350+ Hospitals and Diagnostic Centres
+- **Daily PACS Studies Uploaded**: 1,000+ New Scans Daily
+- **Radiologist Panel Size**: 140+ Fellowship-Trained & Board-Certified Radiologists
+- **Geographic Footprint**: 15+ States Covered in India
+- **Availability**: 24 hours a day, 365 days a year (Zero Radio Silence Policy)
+
+## Services Offered
+1. **CT Scan Reporting**: Head CT, Chest CT, Abdominopelvic CT, CT Angiographies, HRCT Thorax, Trauma CTs.
+2. **MRI Reporting**: Brain MRI, Spine MRI, Musculoskeletal (Knee, Shoulder, Hip), Cardiac MRI, Pelvic MRI.
+3. **Digital X-Ray Reporting**: Chest X-Rays, Skeletal X-Rays, Special Contrast Studies.
+4. **Subspecialty Radiology**: Neuroradiology, MSK, Oncology, Gastrointestinal, Pediatric, Cardiovascular.
+5. **Emergency Nighthawk Reads**: 15–30 minute SLA for critical findings with direct phone calls to ordering physicians.
+6. **Second Opinions & Quality Assurance**: Independent subspecialty review and peer QA audits.
+
+## Technology & Infrastructure
+- **PACS/RIS**: Compatible with all DICOM-compliant modalities and PACS systems (Orthanc, dcm4chee, GE, Siemens, Philips, Fuji, etc.).
+- **Data Security & Privacy**: Secure encrypted channels (SSL/TLS, VPN) for DICOM transmission meeting NABL/NABH data standards.
+
+## Contact Information
+- **Website**: https://trustandhoperad.com
+- **Email**: contact@tahrad.com
+- **Partnership Enquiries**: Contact form available at https://trustandhoperad.com/#contact

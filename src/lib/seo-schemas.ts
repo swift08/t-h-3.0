@@ -1,0 +1,161 @@
+export const SITE_URL = "https://trustandhoperad.com";
+
+export const ORGANIZATION_SCHEMA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["MedicalBusiness", "Organization", "DiagnosticLab"],
+      "@id": `${SITE_URL}/#organization`,
+      "name": "Trust and Hope Rad Pvt. Ltd.",
+      "alternateName": ["TAH RAD", "Trust & Hope Rad", "TAH RAD Teleradiology"],
+      "url": SITE_URL,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${SITE_URL}/Trust%20&%20Hope_Logo_Round_Transparent.webp`,
+        "caption": "Trust and Hope Rad Pvt. Ltd. Logo"
+      },
+      "image": `${SITE_URL}/Trust%20&%20Hope_Logo_Round_Transparent.webp`,
+      "description": "Trust and Hope Rad Pvt. Ltd. (TAH RAD) is India's leading 24x7 teleradiology reporting provider serving 350+ diagnostic centres and hospitals across 15+ states. Powered by 140+ fellowship-trained radiologists delivering rapid CT, MRI, X-Ray, and subspecialty reads with multi-level quality assurance.",
+      "email": "contact@tahrad.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "medicalSpecialty": [
+        "https://schema.org/Radiology",
+        "https://schema.org/DiagnosticImaging"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "knowsAbout": [
+        "Teleradiology Services",
+        "Teleradiology Reporting India",
+        "24x7 Teleradiology",
+        "CT Scan Reporting",
+        "MRI Reporting",
+        "X-Ray Reporting",
+        "Emergency Stat Nighthawk Reads",
+        "Subspecialty Radiology",
+        "PACS Integration",
+        "Diagnostic Imaging"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Teleradiology Reporting Services Catalog",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "24x7 Full-Spectrum Teleradiology Reporting",
+              "description": "Round-the-clock diagnostic reporting for CT, MRI, X-Ray, Ultrasound, Mammography, and PET scans."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Emergency Stat & Nighthawk Reads",
+              "description": "Rapid turnaround time reporting (15-30 mins) for emergency trauma, stroke, and critical care cases."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Subspecialty Radiology Reporting",
+              "description": "Expert subspecialty reads in Neuro-radiology, Musculoskeletal (MSK), Oncology, Gastrointestinal, Cardiac, and Pediatric radiology."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "PACS Integration & Cloud Workflow",
+              "description": "Zero-friction cloud PACS connectivity for instant DICOM study upload and digital report delivery."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      "url": SITE_URL,
+      "name": "Trust and Hope Rad Pvt. Ltd. | 24x7 Teleradiology Services",
+      "publisher": {
+        "@id": `${SITE_URL}/#organization`
+      },
+      "inLanguage": "en-US"
+    }
+  ]
+};
+
+export const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What modalities are covered by TAH RAD Teleradiology?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trust and Hope Rad Pvt. Ltd. provides full-spectrum teleradiology reporting covering CT Scans, MRI, Digital X-Rays, Ultrasound, Mammography, PET-CT, and nuclear medicine scans."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the turnaround time (TAT) for emergency stat reads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For critical and emergency trauma cases, TAH RAD delivers rapid stat reads within 15 to 30 minutes with direct doctor-to-doctor call-backs for urgent findings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many radiologists are on the TAH RAD panel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAH RAD has an extensive panel of over 140 fellowship-trained and board-certified radiologists reporting across general and subspecialties 24 hours a day, 365 days a year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does PACS integration work with diagnostic centres and hospitals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TAH RAD integrates seamlessly with existing hospital PACS/RIS or provides a secure cloud PACS platform for instant DICOM study uploads and digital report delivery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which states in India are served by TAH RAD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trust and Hope Rad Pvt. Ltd. serves over 350 diagnostic centres and hospitals across 15+ states in India."
+      }
+    }
+  ]
+};
+
+export function getBreadcrumbSchema(items: Array<{ name: string; item: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((element, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": element.name,
+      "item": element.item.startsWith("http") ? element.item : `${SITE_URL}${element.item}`
+    }))
+  };
+}

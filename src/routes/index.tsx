@@ -1,33 +1,64 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { tahMarkup } from "@/lib/tah-markup";
+import { ORGANIZATION_SCHEMA, FAQ_SCHEMA, getBreadcrumbSchema, SITE_URL } from "@/lib/seo-schemas";
+import { updateStatsInDOM, STATS_UPDATED_EVENT } from "@/lib/stats-store";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Trust and Hope Rad Pvt. Ltd. — Teleradiology, Read Right." },
+      { title: "Trust and Hope Rad Pvt. Ltd. | 24x7 Teleradiology Services India" },
       {
         name: "description",
         content:
-          "24x7 teleradiology reporting for hospitals and diagnostic centres across India — fast, accurate and secure radiology reports with multi-level QA.",
+          "India's premier 24x7 teleradiology reporting service for hospitals and diagnostic centres. High-accuracy CT, MRI, X-Ray & subspecialty reporting with 15-30 min emergency TAT.",
       },
-      { property: "og:title", content: "Trust and Hope Rad Pvt. Ltd. — Teleradiology, Read Right." },
+      {
+        name: "keywords",
+        content:
+          "teleradiology India, 24x7 teleradiology reporting, CT scan reporting, MRI reporting, X-Ray reporting, emergency radiologist, PACS teleradiology, subspecialty radiology, TAH RAD, Trust and Hope Rad, remote radiology",
+      },
+      { property: "og:title", content: "Trust and Hope Rad Pvt. Ltd. | 24x7 Teleradiology Services India" },
       {
         property: "og:description",
         content:
-          "Fast, accurate and secure radiology reporting, 24 hours a day, 365 days a year. Advanced technology and an extensive radiologist panel.",
+          "Fast, accurate, and secure 24x7 radiology reporting for hospitals across India. 140+ fellowship-trained radiologists and cloud PACS integration.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:site_name", content: "Trust and Hope Rad Pvt. Ltd." },
+      { property: "og:image", content: `${SITE_URL}/Trust%20&%20Hope_Logo_Round_Transparent.webp` },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Trust and Hope Rad Pvt. Ltd. | 24x7 Teleradiology Services" },
+      { name: "twitter:description", content: "24x7 remote radiology reporting for CT, MRI, X-Ray & emergency reads across India." },
     ],
     links: [
+      { rel: "canonical", href: `${SITE_URL}/` },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap",
+        href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap",
       },
       { rel: "stylesheet", href: "/tah.css" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(ORGANIZATION_SCHEMA),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(FAQ_SCHEMA),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(getBreadcrumbSchema([{ name: "Home", item: "/" }])),
+      },
     ],
   }),
   component: Index,
@@ -36,6 +67,18 @@ export const Route = createFileRoute("/")({
 function Index() {
   useEffect(() => {
     const cleanups: Array<() => void> = [];
+
+    // Sync stats from localStorage to DOM on mount and live updates
+    updateStatsInDOM();
+    const handleStatsUpdated = () => {
+      updateStatsInDOM();
+    };
+    window.addEventListener(STATS_UPDATED_EVENT, handleStatsUpdated);
+    window.addEventListener("storage", handleStatsUpdated);
+    cleanups.push(() => {
+      window.removeEventListener(STATS_UPDATED_EVENT, handleStatsUpdated);
+      window.removeEventListener("storage", handleStatsUpdated);
+    });
 
     const form = document.getElementById("contact-form");
     const onSubmit = (e: Event) => {
@@ -116,22 +159,55 @@ function Index() {
       counters.forEach((el) => runCounter(el));
     }
 
-    const backToTop = document.getElementById("back-to-top");
-    const onScroll = () => {
-      if (!backToTop) return;
-      if (window.scrollY > 500) backToTop.classList.add("show");
-      else backToTop.classList.remove("show");
-    };
-    window.addEventListener("scroll", onScroll);
-    const toTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
-    backToTop?.addEventListener("click", toTop);
-    cleanups.push(() => {
-      window.removeEventListener("scroll", onScroll);
-      backToTop?.removeEventListener("click", toTop);
+    // Service Category Filter Tabs Logic
+    const filterBtns = document.querySelectorAll<HTMLButtonElement>(".service-filter-btn");
+    const serviceCols = document.querySelectorAll<HTMLElement>(".service-col");
+
+    filterBtns.forEach((btn) => {
+      const onFilterClick = () => {
+        const filter = btn.dataset.filter ?? "all";
+        filterBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        serviceCols.forEach((col) => {
+          const cat = col.dataset.category ?? "";
+          if (filter === "all" || cat.includes(filter)) {
+            col.style.display = "block";
+            col.style.opacity = "1";
+            col.style.transform = "scale(1)";
+          } else {
+            col.style.display = "none";
+            col.style.opacity = "0";
+            col.style.transform = "scale(0.95)";
+          }
+        });
+      };
+      btn.addEventListener("click", onFilterClick);
+      cleanups.push(() => btn.removeEventListener("click", onFilterClick));
     });
+
+    // Hero PACS Video Playlist Logic (Sequential Playback)
+    const scanVideo = document.getElementById("hero-scan-video") as HTMLVideoElement | null;
+    if (scanVideo) {
+      const playlist = [
+        scanVideo.getAttribute("src") || "",
+        scanVideo.dataset.nextSrc || "",
+      ].filter(Boolean);
+
+      let currentIdx = 0;
+
+      const onEnded = () => {
+        currentIdx = (currentIdx + 1) % playlist.length;
+        scanVideo.src = playlist[currentIdx];
+        scanVideo.play().catch(() => {});
+      };
+
+      scanVideo.addEventListener("ended", onEnded);
+      cleanups.push(() => scanVideo.removeEventListener("ended", onEnded));
+    }
 
     return () => cleanups.forEach((fn) => fn());
   }, []);
 
-  return <div dangerouslySetInnerHTML={{ __html: tahMarkup }} />;
+  return <div suppressHydrationWarning dangerouslySetInnerHTML={{ __html: tahMarkup }} />;
 }
