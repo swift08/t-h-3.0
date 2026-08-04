@@ -214,6 +214,20 @@ function Index() {
       });
     });
 
+    // Accordion flip toggle behavior on tap/click for step cards (only 1 open at a time)
+    const stepCards = document.querySelectorAll(".step-flip-card");
+    stepCards.forEach((card) => {
+      const handler = (e: Event) => {
+        const isAlreadyFlipped = card.classList.contains("is-flipped");
+        stepCards.forEach((c) => c.classList.remove("is-flipped"));
+        if (!isAlreadyFlipped) {
+          card.classList.add("is-flipped");
+        }
+      };
+      card.addEventListener("click", handler);
+      cleanups.push(() => card.removeEventListener("click", handler));
+    });
+
     return () => cleanups.forEach((fn) => fn());
   }, []);
 
