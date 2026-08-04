@@ -177,9 +177,8 @@ export const tahMarkup = `
         </div>
       </div>
 
-      <!-- DETAILED 5 STEPS PROCESS FLOW GRID -->
+      <!-- DETAILED 5 STEPS PROCESS FLOW GRID (SINGLE LINE LAYOUT) -->
       <div class="steps-flow-container reveal-stagger">
-        <!-- ROW 1: STEPS 1, 2, 3 -->
         <div class="steps-flow-row">
           <!-- STEP 1 -->
           <div class="step-card-col">
@@ -191,7 +190,7 @@ export const tahMarkup = `
                     <div class="flip-title">1. Study Received</div>
                   </div>
                   <div class="flip-hint">
-                    <span>Hover to reveal details</span>
+                    <span>Hover</span>
                     <svg class="flip-icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
                   </div>
                 </div>
@@ -207,7 +206,7 @@ export const tahMarkup = `
 
           <!-- ARROW 1 -> 2 -->
           <div class="step-arrow-inline" title="Next Step">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </div>
 
           <!-- STEP 2 -->
@@ -220,15 +219,15 @@ export const tahMarkup = `
                     <div class="flip-title">2. Radiologist Assigned</div>
                   </div>
                   <div class="flip-hint">
-                    <span>Hover to reveal details</span>
+                    <span>Hover</span>
                     <svg class="flip-icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
                   </div>
                 </div>
                 <div class="step-flip-back step-detail-card">
                   <span class="step-num-badge">02</span>
                   <h3>2. Radiologist Assigned</h3>
-                  <p class="step-text">The right radiologist is chosen based on the specialty and the modality, as well as the urgency of the case.</p>
-                  <div class="step-highlight">Smart routing across <span data-stat-val="radiologists">140+</span> fellowship-trained radiologists 24/7/365.</div>
+                  <p class="step-text">The right radiologist is chosen based on the specialty and urgency.</p>
+                  <div class="step-highlight">Smart routing across <span data-stat-val="radiologists">140+</span> fellowship-trained radiologists 24/7.</div>
                 </div>
               </div>
             </div>
@@ -236,7 +235,7 @@ export const tahMarkup = `
 
           <!-- ARROW 2 -> 3 -->
           <div class="step-arrow-inline" title="Next Step">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </div>
 
           <!-- STEP 3 -->
@@ -249,41 +248,25 @@ export const tahMarkup = `
                     <div class="flip-title">3. Report Drafted</div>
                   </div>
                   <div class="flip-hint">
-                    <span>Hover to reveal details</span>
+                    <span>Hover</span>
                     <svg class="flip-icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
                   </div>
                 </div>
                 <div class="step-flip-back step-detail-card">
                   <span class="step-num-badge">03</span>
                   <h3>3. Report Drafted</h3>
-                  <p class="step-text">Critical findings are flagged for priority, and the report is done in a structured format.</p>
-                  <div class="step-highlight">Standardized reporting templates with immediate phone callbacks for stat findings.</div>
+                  <p class="step-text">Critical findings are flagged for priority in structured format.</p>
+                  <div class="step-highlight">Standardized templates with immediate phone callbacks for stat findings.</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- ROW CONNECTOR: STEP 3 -> STEP 4 LONG SWEEPING ARROW -->
-        <div class="steps-row-connector-long">
-          <div class="long-arrow-wrapper">
-            <svg viewBox="0 0 1000 56" preserveAspectRatio="none">
-              <defs>
-                <marker id="arrowhead-teal-long" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
-                  <path d="M 0 0 L 8 4 L 0 8 z" fill="var(--teal)" />
-                </marker>
-              </defs>
-              <path class="long-arrow-path" d="M 850 6 C 850 48, 150 8, 150 48" marker-end="url(#arrowhead-teal-long)"></path>
-            </svg>
-            <div class="long-arrow-label" title="Flow to Step 4 (Quality Check)">
-              <span>Step 3 &rarr; Step 4</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-            </div>
+          <!-- ARROW 3 -> 4 -->
+          <div class="step-arrow-inline" title="Next Step">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </div>
-        </div>
 
-        <!-- ROW 2: STEPS 4, 5, PACS -->
-        <div class="steps-flow-row">
           <!-- STEP 4 -->
           <div class="step-card-col">
             <div class="step-flip-card" tabindex="0">
@@ -294,14 +277,14 @@ export const tahMarkup = `
                     <div class="flip-title">4. Quality Check</div>
                   </div>
                   <div class="flip-hint">
-                    <span>Hover to reveal details</span>
+                    <span>Hover</span>
                     <svg class="flip-icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
                   </div>
                 </div>
                 <div class="step-flip-back step-detail-card">
                   <span class="step-num-badge">04</span>
                   <h3>4. Quality Check</h3>
-                  <p class="step-text">A second review is done to ensure accuracy and completeness of the report, with clinical considerations of the findings.</p>
+                  <p class="step-text">A second review ensures accuracy with clinical considerations.</p>
                   <div class="step-highlight">Multi-tier Quality Assurance and peer review audits for 100% precision.</div>
                 </div>
               </div>
@@ -310,7 +293,7 @@ export const tahMarkup = `
 
           <!-- ARROW 4 -> 5 -->
           <div class="step-arrow-inline" title="Next Step">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </div>
 
           <!-- STEP 5 -->
@@ -323,7 +306,7 @@ export const tahMarkup = `
                     <div class="flip-title">5. Report Delivered</div>
                   </div>
                   <div class="flip-hint">
-                    <span>Hover to reveal details</span>
+                    <span>Hover</span>
                     <svg class="flip-icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
                   </div>
                 </div>
@@ -331,7 +314,7 @@ export const tahMarkup = `
                   <span class="step-num-badge active-badge">05</span>
                   <h3>5. Report Delivered</h3>
                   <p class="step-text">The signed report is delivered with a direct query line to our system.</p>
-                  <div class="step-highlight">Pushed back to your PACS with doctor-to-doctor direct consultation line.</div>
+                  <div class="step-highlight">Pushed back to PACS with doctor-to-doctor direct consultation line.</div>
                 </div>
               </div>
             </div>
@@ -339,7 +322,7 @@ export const tahMarkup = `
 
           <!-- ARROW 5 -> PACS -->
           <div class="step-arrow-inline" title="Next Step">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </div>
 
           <!-- PACS FEATURE CARD -->
@@ -352,15 +335,15 @@ export const tahMarkup = `
                     <div class="flip-title" style="color: #FFFFFF;">Fully Integrated PACS</div>
                   </div>
                   <div class="flip-hint" style="background: rgba(255,255,255,0.15); color: #E6EDF5;">
-                    <span>Hover to reveal details</span>
+                    <span>Hover</span>
                     <svg class="flip-icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
                   </div>
                 </div>
                 <div class="step-flip-back step-detail-card" style="background: linear-gradient(135deg, #0E2440 0%, #16355C 100%); color: #FFFFFF;">
                   <span class="step-num-badge" style="background: rgba(255,255,255,0.15); color: #FFFFFF;">PACS</span>
                   <h3 style="color: #FFFFFF;">Fully Integrated PACS</h3>
-                  <p class="step-text" style="color: #D0DCED;">No manual uploading required. Our system hooks directly into your existing DICOM feed to streamline scan reception and report delivery.</p>
-                  <div class="step-highlight" style="background: rgba(255,255,255,0.08); border-color: var(--teal); color: #E6EDF5;">Zero technical friction. Complete setup support provided by our IT team.</div>
+                  <p class="step-text" style="color: #D0DCED;">Hooks directly into DICOM feed to streamline report delivery.</p>
+                  <div class="step-highlight" style="background: rgba(255,255,255,0.08); border-color: var(--teal); color: #E6EDF5;">Zero technical friction with IT support.</div>
                 </div>
               </div>
             </div>
