@@ -7,22 +7,22 @@ import { getBreadcrumbSchema, SITE_URL } from "@/lib/seo-schemas";
 export const Route = createFileRoute("/how-reporting-works")({
   head: () => ({
     meta: [
-      { title: "How Teleradiology Reporting Works (PACS Workflow) | Trust and Hope Rad Pvt. Ltd." },
+      { title: "How Reporting Works | 5-Step Radiology Workflow | Trust and Hope Rad Pvt. Ltd." },
       {
         name: "description",
         content:
-          "Discover our 5-step 24x7 teleradiology workflow: DICOM upload, smart radiologist assignment, structured report drafting, multi-level QA, and fast delivery.",
+          "Discover how Trust and Hope Rad delivers 24x7 teleradiology reports in 5 simple steps. Fully integrated with your hospital PACS for fast CT, MRI & X-Ray reads.",
       },
       {
         name: "keywords",
         content:
-          "teleradiology workflow, PACS integration radiology, DICOM reporting workflow, teleradiology SLA, radiology QA audit, TAH RAD workflow",
+          "teleradiology workflow, PACS integration, radiologist reporting process, emergency radiology turnaround, DICOM router",
       },
-      { property: "og:title", content: "How Teleradiology Reporting Works | Trust and Hope Rad Pvt. Ltd." },
+      { property: "og:title", content: "How Reporting Works | 5-Step Radiology Workflow | Trust and Hope Rad Pvt. Ltd." },
       {
         property: "og:description",
         content:
-          "From scan to signed report in 5 simple steps with 24/7 PACS cloud integration and multi-level quality assurance.",
+          "From scan to signed report in 5 steps. Direct DICOM router & cloud PACS integration for instant data transfer.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${SITE_URL}/how-reporting-works` },
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/how-reporting-works")({
         children: JSON.stringify(
           getBreadcrumbSchema([
             { name: "Home", item: "/" },
-            { name: "How It Works", item: "/how-reporting-works" },
+            { name: "How Reporting Works", item: "/how-reporting-works" },
           ])
         ),
       },
@@ -115,9 +115,9 @@ function HowReportingWorks() {
             </Link>
             <nav className="links">
               <Link to="/">Home</Link>
-              <Link to="/#who-we-are">About Us</Link>
-              <Link to="/#services">Services</Link>
-              <Link to="/#contact">Contact</Link>
+              <Link to="/" hash="who-we-are">About Us</Link>
+              <Link to="/" hash="services">Services</Link>
+              <Link to="/" hash="contact">Contact</Link>
             </nav>
             <button className="burger" id="burger-btn" aria-label="Menu">
               <span></span>
@@ -130,12 +130,12 @@ function HowReportingWorks() {
 
       <div className="mobile-drawer" id="mobile-drawer">
         <Link to="/">Home</Link>
-        <Link to="/#who-we-are">About Us</Link>
-        <Link to="/#services">Services</Link>
+        <Link to="/" hash="who-we-are">About Us</Link>
+        <Link to="/" hash="services">Services</Link>
         <Link to="/how-reporting-works">How It Works</Link>
-        <Link to="/#why-us">Why Us</Link>
-        <Link to="/#contact">Contact</Link>
-        <Link to="/#contact" className="nav-cta">
+        <Link to="/" hash="why-us">Why Us</Link>
+        <Link to="/" hash="contact">Contact</Link>
+        <Link to="/" hash="contact" className="nav-cta">
           Partner With Us
         </Link>
       </div>
@@ -379,7 +379,8 @@ function HowReportingWorks() {
                 24x7 SLAs, direct radiologist access, and PACS integration.
               </p>
               <Link
-                to="/#contact"
+                to="/"
+                hash="contact"
                 className="btn-custom btn-custom-primary"
                 style={{ fontSize: "16px", padding: "14px 32px" }}
               >
@@ -408,19 +409,19 @@ function HowReportingWorks() {
               <h5>Navigate</h5>
               <ul>
                 <li>
-                  <Link to="/#who-we-are">About Us</Link>
+                  <Link to="/" hash="who-we-are">About Us</Link>
                 </li>
                 <li>
-                  <Link to="/#services">Services</Link>
+                  <Link to="/" hash="services">Services</Link>
                 </li>
                 <li>
                   <Link to="/how-reporting-works">How It Works</Link>
                 </li>
                 <li>
-                  <Link to="/#why-us">Why Us</Link>
+                  <Link to="/" hash="why-us">Why Us</Link>
                 </li>
                 <li>
-                  <Link to="/#contact">Contact</Link>
+                  <Link to="/" hash="contact">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -428,19 +429,19 @@ function HowReportingWorks() {
               <h5>Modalities</h5>
               <ul>
                 <li>
-                  <Link to="/#services">CT Reporting</Link>
+                  <Link to="/" hash="services">CT Reporting</Link>
                 </li>
                 <li>
-                  <Link to="/#services">MRI Reporting</Link>
+                  <Link to="/" hash="services">MRI Reporting</Link>
                 </li>
                 <li>
-                  <Link to="/#services">X-Ray &amp; USG Reads</Link>
+                  <Link to="/" hash="services">X-Ray &amp; USG Reads</Link>
                 </li>
                 <li>
-                  <Link to="/#services">PET Oncology Scans</Link>
+                  <Link to="/" hash="services">PET Oncology Scans</Link>
                 </li>
                 <li>
-                  <Link to="/#services">Nighthawk &amp; Stat Reads</Link>
+                  <Link to="/" hash="services">Nighthawk &amp; Stat Reads</Link>
                 </li>
               </ul>
             </div>
@@ -459,3 +460,4 @@ function HowReportingWorks() {
     </div>
   );
 }
+

@@ -16,6 +16,7 @@ export const tahMarkup = `
       <nav class="links">
         <a href="#hero">Home</a>
         <a href="#who-we-are">About Us</a>
+        <a href="#how-reporting-works">How It Works</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -24,53 +25,33 @@ export const tahMarkup = `
 </header>
 
 <div class="mobile-drawer" id="mobile-drawer">
+  <a href="#hero">Home</a>
   <a href="#who-we-are">About Us</a>
   <a href="/our-team">Our Team</a>
   <a href="/where-we-work">Where We Work</a>
-  <a href="/how-reporting-works">How It Works</a>
+  <a href="#how-reporting-works">How It Works</a>
   <a href="#services">Services</a>
   <a href="#why-us">Why Us</a>
   <a href="#contact">Contact</a>
-  <a href="#contact" class="nav-cta">Partner With Us</a>
+  <a href="#contact" class="nav-cta btn-glow">Partner With Us</a>
 </div>
 
 <main>
   <!-- HERO SECTION -->
   <section class="hero" id="hero">
+    <video id="hero-bg-video" src="${heroVideo1Url}" data-next-src="${heroVideo2Url}" autoplay muted playsinline class="hero-bg-video"></video>
+    <div class="hero-video-overlay"></div>
+
     <div class="container">
       <div class="row g-4 align-items-center">
-        <div class="col-12 col-lg-7 reveal">
+        <div class="col-12 col-lg-9 col-xl-8 reveal">
           <span class="eyebrow">24×7 Teleradiology Reporting</span>
           <h1>FULL-SPECTRUM TELERADIOLOGY,<br><em>ONE REPORTING PARTNER</em></h1>
           <p class="lead">From X-Rays to specialty MRIs, we cover the entire diagnostic imaging spectrum so you don't have to work with multiple vendors for different modalities.</p>
           
-          <div class="hero-ctas">
-            <a href="#contact" class="btn-custom btn-custom-primary">Partner With Us →</a>
-            <a href="#services" class="btn-custom btn-custom-ghost">Explore Services</a>
-          </div>
-
           <div class="hero-quick-nav mt-3 pt-2 d-flex flex-wrap gap-2">
-            <a href="/our-team" class="btn-custom btn-custom-ghost" style="padding: 9px 18px; font-size: 13.5px; border-color: rgba(43,168,183,0.3) !important;">Our Team →</a>
-            <a href="/where-we-work" class="btn-custom btn-custom-ghost" style="padding: 9px 18px; font-size: 13.5px; border-color: rgba(43,168,183,0.3) !important;">Where We Work →</a>
-            <a href="/how-reporting-works" class="btn-custom btn-custom-ghost" style="padding: 9px 18px; font-size: 13.5px; border-color: rgba(43,168,183,0.3) !important;">How It Works →</a>
-            <a href="#why-us" class="btn-custom btn-custom-ghost" style="padding: 9px 18px; font-size: 13.5px; border-color: rgba(43,168,183,0.3) !important;">Why Us →</a>
-          </div>
-        </div>
-
-        <div class="col-12 col-lg-5 reveal">
-          <div class="scan-panel">
-            <div class="panel-head">
-              <span>TAH RAD PACS | LIVE NETWORK</span>
-              <div class="dots"><i></i><i></i><i></i></div>
-            </div>
-            <div class="scan-stage">
-              <video id="hero-scan-video" src="${heroVideo1Url}" data-next-src="${heroVideo2Url}" autoplay muted playsinline class="scan-video"></video>
-              <div class="scan-line"></div>
-            </div>
-            <div class="panel-head mt-3 mb-0">
-              <span>STATUS: ONLINE &amp; REPORTING</span>
-              <span style="color:var(--teal);">24/7 ACTIVE</span>
-            </div>
+            <a href="/our-team" class="btn-custom btn-custom-ghost" style="padding: 9px 18px; font-size: 13.5px; border-color: rgba(43,168,183,0.35) !important; color: #FFFFFF !important; background: rgba(255,255,255,0.08) !important;">Our Team →</a>
+            <a href="/where-we-work" class="btn-custom btn-custom-ghost" style="padding: 9px 18px; font-size: 13.5px; border-color: rgba(43,168,183,0.35) !important; color: #FFFFFF !important; background: rgba(255,255,255,0.08) !important;">Where We Work →</a>
           </div>
         </div>
       </div>
@@ -185,268 +166,350 @@ export const tahMarkup = `
     </div>
   </section>
 
+  <!-- HOW REPORTING WORKS SECTION -->
+  <section class="how-reporting-works" id="how-reporting-works" style="padding: 85px 0; background: var(--paper); border-bottom: 1px solid var(--line);">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5 reveal">
+        <div class="col-12 col-lg-9">
+          <span class="eyebrow mb-2">FROM SCAN TO SIGNED REPORT, IN FIVE STEPS</span>
+          <h2 style="font-size: clamp(30px, 4vw, 48px); margin-top: 10px;">How Reporting Works</h2>
+          <p style="color: var(--muted-slate); font-size: 17.5px; max-width: 800px; margin: 0 auto;">Each of these steps is designed to facilitate the process of getting reports done, and is fully integrated with PACS.</p>
+        </div>
+      </div>
+
+      <!-- 5-STEP HORIZONTAL STEPPER -->
+      <div class="workflow-stepper reveal">
+        <div class="workflow-nodes">
+          <div class="workflow-node-item">
+            <div class="workflow-circle">1</div>
+            <div class="workflow-node-label">Imaging Centre</div>
+          </div>
+          <div class="workflow-connector"><span></span><span></span></div>
+          <div class="workflow-node-item">
+            <div class="workflow-circle">2</div>
+            <div class="workflow-node-label">Secure Upload</div>
+          </div>
+          <div class="workflow-connector"><span></span><span></span></div>
+          <div class="workflow-node-item">
+            <div class="workflow-circle">3</div>
+            <div class="workflow-node-label">Radiologist Review</div>
+          </div>
+          <div class="workflow-connector"><span></span><span></span></div>
+          <div class="workflow-node-item">
+            <div class="workflow-circle">4</div>
+            <div class="workflow-node-label">Report Delivery</div>
+          </div>
+          <div class="workflow-connector"><span></span><span></span></div>
+          <div class="workflow-node-item">
+            <div class="workflow-circle highlight">5</div>
+            <div class="workflow-node-label">Patient Care</div>
+          </div>
+        </div>
+        <p class="workflow-caption">Seamless integration into existing medical workflows.</p>
+      </div>
+
+      <!-- DETAILED 5 STEPS GRID -->
+      <div class="row g-4 reveal-stagger">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="step-detail-card">
+            <span class="step-num-badge">01</span>
+            <h3>1. Study Received</h3>
+            <p class="step-text">Images make their way to us from your PACS or modality.</p>
+            <div class="step-highlight">Direct DICOM router &amp; cloud PACS integration for instant data transfer.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="step-detail-card">
+            <span class="step-num-badge">02</span>
+            <h3>2. Radiologist Assigned</h3>
+            <p class="step-text">The right radiologist is chosen based on the specialty and the modality, as well as the urgency of the case.</p>
+            <div class="step-highlight">Smart routing across <span data-stat-val="radiologists">140+</span> fellowship-trained radiologists 24/7/365.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="step-detail-card">
+            <span class="step-num-badge">03</span>
+            <h3>3. Report Drafted</h3>
+            <p class="step-text">Critical findings are flagged for priority, and the report is done in a structured format.</p>
+            <div class="step-highlight">Standardized reporting templates with immediate phone callbacks for stat findings.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="step-detail-card">
+            <span class="step-num-badge">04</span>
+            <h3>4. Quality Check</h3>
+            <p class="step-text">A second review is done to ensure accuracy and completeness of the report, with clinical considerations of the findings.</p>
+            <div class="step-highlight">Multi-tier Quality Assurance and peer review audits for 100% precision.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="step-detail-card" style="border-color: rgba(43, 168, 183, 0.4);">
+            <span class="step-num-badge active-badge">05</span>
+            <h3>5. Report Delivered</h3>
+            <p class="step-text">The signed report is delivered with a direct query line to our system.</p>
+            <div class="step-highlight">Pushed back to your PACS with doctor-to-doctor direct consultation line.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="step-detail-card" style="background: linear-gradient(135deg, #0E2440 0%, #16355C 100%); color: #FFFFFF;">
+            <span class="step-num-badge" style="background: rgba(255,255,255,0.15); color: #FFFFFF;">PACS</span>
+            <h3 style="color: #FFFFFF;">Fully Integrated PACS</h3>
+            <p class="step-text" style="color: #D0DCED;">No manual uploading required. Our system hooks directly into your existing DICOM feed to streamline scan reception and report delivery.</p>
+            <div class="step-highlight" style="background: rgba(255,255,255,0.08); border-color: var(--teal); color: #E6EDF5;">Zero technical friction. Complete setup support provided by our IT team.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- WHAT WE REPORT / SERVICES SECTION -->
   <section class="services" id="services">
     <div class="container">
-      <div class="row mb-4 reveal text-center justify-content-center">
+      <div class="row mb-5 reveal text-center justify-content-center">
         <div class="col-12 col-lg-9">
           <span class="eyebrow">WHAT WE DO</span>
           <h2 style="font-size:clamp(30px, 4vw, 48px); margin-top:10px;">FULL-SPECTRUM TELERADIOLOGY,<br><em style="font-style:normal; color:var(--teal);">ONE REPORTING PARTNER</em></h2>
+          <p style="color:var(--navy-blue); font-size:16px; margin-top:14px; max-width:620px; margin-left:auto; margin-right:auto;">From X-Rays to specialty MRIs, we cover the entire diagnostic imaging spectrum so you don't have to work with multiple vendors for different modalities.</p>
         </div>
       </div>
 
-      <!-- MODALITY REPORTING FEATURE BANNER -->
-      <div class="modality-banner-box reveal">
-        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
-          <h3 class="modality-banner-title mb-0">Timely, expert reporting across every modality</h3>
-          <span style="background:rgba(63,168,69,0.12); color:#2E8533; border:1px solid rgba(63,168,69,0.3); font-family:var(--font-mono); font-size:12px; font-weight:600; padding:6px 16px; border-radius:100px;">🟢 24/7 ACTIVE NETWORK</span>
-        </div>
-        <div class="modality-pills mb-3">
-          <span class="modality-pill">Emergency</span>
-          <span class="modality-pill">Routine</span>
-          <span class="modality-pill">Subspecialty</span>
-          <span class="modality-pill">Night Reporting</span>
-          <span class="modality-pill">Second Opinion</span>
-        </div>
-        <p class="modality-banner-desc">We help healthcare providers access timely, expert radiology reporting, delivering high-quality diagnostic interpretations remotely without depending only on on-site radiologist availability.</p>
-        <div class="d-flex flex-wrap gap-2 mt-3">
-          <a href="/how-reporting-works" class="btn-custom btn-custom-primary">See How Reporting Works →</a>
-          <a href="/our-team" class="btn-custom btn-custom-ghost">Radiologist Panel →</a>
-          <a href="/where-we-work" class="btn-custom btn-custom-ghost">Where We Work →</a>
-        </div>
-      </div>
+      <!-- SPLIT-PANEL SERVICES EXPLORER -->
+      <div class="svc-explorer reveal" id="svc-explorer">
 
-      <!-- CATEGORY FILTER TABS -->
-      <div class="service-filter-bar reveal mb-4" id="service-filter-bar">
-        <button className="service-filter-btn active" data-filter="all">All Services (11)</button>
-        <button className="service-filter-btn" data-filter="emergency">Emergency &amp; Stat</button>
-        <button className="service-filter-btn" data-filter="cross-sectional">CT &amp; MRI Scans</button>
-        <button className="service-filter-btn" data-filter="subspecialty">Subspecialty &amp; PET</button>
-        <button className="service-filter-btn" data-filter="advanced">Advanced 3D &amp; AI PACS</button>
-      </div>
+        <!-- LEFT: Service Nav Sidebar -->
+        <div class="svc-nav" id="svc-nav">
+          <div class="svc-nav-header">
+            <span class="svc-nav-badge">24/7 Active</span>
+            <p class="svc-nav-label">8 Services</p>
+          </div>
+          <div class="svc-nav-list">
+            <button class="svc-pill active" data-svc="ct">
+              <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="7" y1="12" x2="17" y2="12"/></svg></span>
+              <span class="svc-pill-name">CT Reporting</span>
+              <span class="svc-pill-tag">STAT</span>
+            </button>
+            <button class="svc-pill" data-svc="mri">
+              <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 5v13"/></svg></span>
+              <span class="svc-pill-name">MRI Reporting</span>
+              <span class="svc-pill-tag">Sub</span>
+            </button>
+            <button class="svc-pill" data-svc="xray">
+              <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 8V1"/><path d="M12 16v7"/><path d="m15.5 10 6-3.5"/><path d="m8.5 14-6 3.5"/><path d="m15.5 14 6 3.5"/><path d="m8.5 10-6-3.5"/></svg></span>
+              <span class="svc-pill-name">X-Ray Reporting</span>
+              <span class="svc-pill-tag">24/7</span>
+            </button>
+            <button class="svc-pill" data-svc="pet">
+              <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><ellipse cx="12" cy="12" rx="9" ry="3"/><ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(120 12 12)"/></svg></span>
+              <span class="svc-pill-name">PET Reporting</span>
+              <span class="svc-pill-tag">Onco</span>
+            </button>
+            <button class="svc-pill" data-svc="usg">
+              <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
+              <span class="svc-pill-name">USG Reporting</span>
+              <span class="svc-pill-tag">Doppler</span>
+            </button>
+            <button class="svc-pill" data-svc="subspecialty">
+              <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.3.3 0 1 0 .2.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg></span>
+              <span class="svc-pill-name">Subspecialty Reads</span>
+              <span class="svc-pill-tag">Cert</span>
+            </button>
+            <button class="svc-pill" data-svc="nighthawk">
+              <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+              <span class="svc-pill-name">Nighthawk &amp; Stat</span>
+              <span class="svc-pill-tag">Night</span>
+            </button>
+            <button class="svc-pill" data-svc="second">
+              <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span>
+              <span class="svc-pill-name">Second Opinions</span>
+              <span class="svc-pill-tag">QA</span>
+            </button>
 
-      <!-- CARDS GRID -->
-      <div class="row g-4 reveal-stagger" id="services-grid">
-        <!-- 1. CT -->
-        <div class="col-12 col-md-6 col-lg-4 service-col" data-category="emergency cross-sectional">
-          <div class="service-card">
-            <div class="card-head">
-              <div class="icn">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
-              </div>
-              <span class="card-badge stat-badge">⚡ Sub-Hour SLA</span>
-            </div>
-            <h4>CT Reporting</h4>
-            <p class="subtitle">Fast &amp; Accurate Computed Tomography</p>
-            <p class="desc">High-speed CT reporting for head, chest, abdomen, angiography, and polytrauma emergencies with sub-hour stat delivery.</p>
-            <ul class="service-bullets">
-              <li>Trauma &amp; Stroke Emergency Reads</li>
-              <li>3D Angiography &amp; Vessel Analysis</li>
-              <li>Routine Abdominal &amp; Chest Scans</li>
-            </ul>
           </div>
         </div>
 
-        <!-- 2. MRI -->
-        <div class="col-12 col-md-6 col-lg-4 service-col" data-category="cross-sectional subspecialty">
-          <div class="service-card">
-            <div class="card-head">
-              <div class="icn">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-              </div>
-              <span class="card-badge">🧠 Subspecialty</span>
-            </div>
-            <h4>MRI Reporting</h4>
-            <p class="subtitle">High-Resolution Soft Tissue Diagnostic</p>
-            <p class="desc">Comprehensive MRI interpretations covering neuroradiology, spine, musculoskeletal joints, pelvic, and cardiac studies.</p>
-            <ul class="service-bullets">
-              <li>Subspecialty Neuroradiology &amp; Spine</li>
-              <li>MSK Joint &amp; Cartilage Imaging</li>
-              <li>Multiparametric Prostate &amp; Abdomen</li>
-            </ul>
-          </div>
-        </div>
+        <!-- RIGHT: Detail Panel -->
+        <div class="svc-detail-panel" id="svc-detail-panel">
 
-        <!-- 3. X-Ray -->
-        <div class="col-12 col-md-6 col-lg-4 service-col" data-category="routine">
-          <div class="service-card">
-            <div class="card-head">
-              <div class="icn">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="12" y1="8" x2="12" y2="16"/></svg>
+          <!-- CT -->
+          <div class="svc-panel active" id="svc-ct">
+            <div class="svc-panel-header">
+              <div class="svc-panel-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="7" y1="12" x2="17" y2="12"/></svg></div>
+              <div>
+                <span class="svc-panel-cat">Emergency &amp; Cross-Sectional</span>
+                <h3 class="svc-panel-title">CT Reporting</h3>
+                <p class="svc-panel-sub">Fast &amp; Accurate Computed Tomography</p>
               </div>
-              <span class="card-badge">📄 24/7 Digital</span>
+              <span class="svc-panel-badge stat">Sub-Hour SLA</span>
             </div>
-            <h4>X-Ray Reporting</h4>
-            <p class="subtitle">24/7 Digital Radiography</p>
-            <p class="desc">Rapid turnaround for high-volume plain radiography, chest X-rays, trauma skeletal series, and routine screening.</p>
-            <ul class="service-bullets">
-              <li>Chest &amp; Cardiac Radiography</li>
-              <li>Orthopedic Skeletal Series</li>
-              <li>High-Volume Batch Reporting</li>
-            </ul>
+            <p class="svc-panel-desc">High-speed CT reporting for head, chest, abdomen, angiography, and polytrauma emergencies with sub-hour stat delivery.</p>
+            <div class="svc-panel-bullets">
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Trauma &amp; Stroke Emergency Reads</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>3D Angiography &amp; Vessel Analysis</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Routine Abdominal &amp; Chest Scans</strong></div></div>
+            </div>
+            <div class="svc-panel-footer">
+              <span class="svc-footer-chip">Head CT</span><span class="svc-footer-chip">Chest CT</span><span class="svc-footer-chip">CTA</span><span class="svc-footer-chip">Polytrauma</span><span class="svc-footer-chip">Abdominal CT</span>
+            </div>
           </div>
-        </div>
 
-        <!-- 4. PET -->
-        <div class="col-12 col-md-6 col-lg-4 service-col" data-category="subspecialty advanced">
-          <div class="service-card">
-            <div class="card-head">
-              <div class="icn">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a7 7 0 0 0 7 7M12 22a7 7 0 0 0-7-7"/></svg>
+          <!-- MRI -->
+          <div class="svc-panel" id="svc-mri">
+            <div class="svc-panel-header">
+              <div class="svc-panel-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 5v13"/></svg></div>
+              <div>
+                <span class="svc-panel-cat">Subspecialty</span>
+                <h3 class="svc-panel-title">MRI Reporting</h3>
+                <p class="svc-panel-sub">High-Resolution Soft Tissue Diagnostic</p>
               </div>
-              <span class="card-badge">🔬 Oncology Staging</span>
+              <span class="svc-panel-badge">Subspecialty</span>
             </div>
-            <h4>PET Reporting</h4>
-            <p class="subtitle">Oncology &amp; Metabolic Imaging</p>
-            <p class="desc">Specialized PET/CT molecular imaging reads for cancer staging, therapy evaluation, and metabolic lesion tracking.</p>
-            <ul class="service-bullets">
-              <li>Oncology Staging &amp; Restaging</li>
-              <li>FDG Whole-Body Scans</li>
-              <li>Radiotracer Uptake Quantification</li>
-            </ul>
+            <p class="svc-panel-desc">Comprehensive MRI interpretations covering neuroradiology, spine, musculoskeletal joints, pelvic, and cardiac studies.</p>
+            <div class="svc-panel-bullets">
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Subspecialty Neuroradiology &amp; Spine</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>MSK Joint &amp; Cartilage Imaging</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Multiparametric Prostate &amp; Abdomen</strong></div></div>
+            </div>
+            <div class="svc-panel-footer">
+              <span class="svc-footer-chip">Neuro MRI</span><span class="svc-footer-chip">Spine MRI</span><span class="svc-footer-chip">MSK</span><span class="svc-footer-chip">Cardiac MRI</span><span class="svc-footer-chip">mpMRI</span>
+            </div>
           </div>
-        </div>
 
-        <!-- 5. USG -->
-        <div class="col-12 col-md-6 col-lg-4 service-col" data-category="routine">
-          <div class="service-card">
-            <div class="card-head">
-              <div class="icn">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h4l3-9 4 18 3-9h4"/></svg>
+          <!-- X-Ray -->
+          <div class="svc-panel" id="svc-xray">
+            <div class="svc-panel-header">
+              <div class="svc-panel-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 8V1"/><path d="M12 16v7"/><path d="m15.5 10 6-3.5"/><path d="m8.5 14-6 3.5"/><path d="m15.5 14 6 3.5"/><path d="m8.5 10-6-3.5"/></svg></div>
+              <div>
+                <span class="svc-panel-cat">Routine &amp; High-Volume</span>
+                <h3 class="svc-panel-title">X-Ray Reporting</h3>
+                <p class="svc-panel-sub">24/7 Digital Radiography</p>
               </div>
-              <span class="card-badge"> Doppler Vascular</span>
+              <span class="svc-panel-badge">24/7 Digital</span>
             </div>
-            <h4>USG Reporting</h4>
-            <p class="subtitle">Ultrasonography &amp; Color Doppler</p>
-            <p class="desc">Expert review for general ultrasound, Doppler vascular studies, anomaly scans, and pelvic diagnostic imagery.</p>
-            <ul class="service-bullets">
-              <li>Color Doppler Vascular Reads</li>
-              <li>Obstetric &amp; Fetal Anomaly Scans</li>
-              <li>Abdominal &amp; Small Parts Review</li>
-            </ul>
+            <p class="svc-panel-desc">Rapid turnaround for high-volume plain radiography, chest X-rays, trauma skeletal series, and routine screening.</p>
+            <div class="svc-panel-bullets">
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Chest &amp; Cardiac Radiography</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Orthopedic Skeletal Series</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>High-Volume Batch Reporting</strong></div></div>
+            </div>
+            <div class="svc-panel-footer">
+              <span class="svc-footer-chip">Chest X-Ray</span><span class="svc-footer-chip">Skeletal</span><span class="svc-footer-chip">Trauma</span><span class="svc-footer-chip">Screening</span><span class="svc-footer-chip">Batch</span>
+            </div>
           </div>
-        </div>
 
-        <!-- 6. Subspecialty Reads -->
-        <div class="col-12 col-md-6 col-lg-4 service-col" data-category="subspecialty">
-          <div class="service-card">
-            <div class="card-head">
-              <div class="icn">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <!-- PET -->
+          <div class="svc-panel" id="svc-pet">
+            <div class="svc-panel-header">
+              <div class="svc-panel-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><ellipse cx="12" cy="12" rx="9" ry="3"/><ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(120 12 12)"/></svg></div>
+              <div>
+                <span class="svc-panel-cat">Subspecialty &amp; Advanced</span>
+                <h3 class="svc-panel-title">PET Reporting</h3>
+                <p class="svc-panel-sub">Oncology &amp; Metabolic Imaging</p>
               </div>
-              <span class="card-badge">🎓 Board Certified</span>
+              <span class="svc-panel-badge">Oncology Staging</span>
             </div>
-            <h4>Subspecialty Reads</h4>
-            <p class="subtitle">Domain-Specific Expert Interpretations</p>
-            <p class="desc">Domain-specific imaging reads are reported by radiologists trained in Neuroradiology, Musculoskeletal Imaging, Cardiothoracic Imaging, Oncology and Obstetric Imaging.</p>
-            <ul class="service-bullets">
-              <li>Neuro &amp; MSK Board Radiologists</li>
-              <li>Cardiothoracic &amp; Vascular Specialists</li>
-              <li>Oncology &amp; Obstetric Imaging</li>
-            </ul>
+            <p class="svc-panel-desc">Specialized PET/CT molecular imaging reads for cancer staging, therapy evaluation, and metabolic lesion tracking.</p>
+            <div class="svc-panel-bullets">
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Oncology Staging &amp; Restaging</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>FDG Whole-Body Scans</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Radiotracer Uptake Quantification</strong></div></div>
+            </div>
+            <div class="svc-panel-footer">
+              <span class="svc-footer-chip">PET/CT</span><span class="svc-footer-chip">FDG</span><span class="svc-footer-chip">Oncology</span><span class="svc-footer-chip">PERCIST</span><span class="svc-footer-chip">SUVmax</span>
+            </div>
           </div>
-        </div>
 
-        <!-- 7. Nighthawk & Stat Reads -->
-        <div class="col-12 col-md-6 col-lg-4 service-col" data-category="emergency">
-          <div class="service-card">
-            <div class="card-head">
-              <div class="icn">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <!-- USG -->
+          <div class="svc-panel" id="svc-usg">
+            <div class="svc-panel-header">
+              <div class="svc-panel-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+              <div>
+                <span class="svc-panel-cat">Routine</span>
+                <h3 class="svc-panel-title">USG Reporting</h3>
+                <p class="svc-panel-sub">Ultrasonography &amp; Color Doppler</p>
               </div>
-              <span class="card-badge stat-badge">🌙 24/7 Nighthawk</span>
+              <span class="svc-panel-badge">Doppler Vascular</span>
             </div>
-            <h4>Nighthawk &amp; Stat Reads</h4>
-            <p class="subtitle">Nighttime Radiology Coverage, Daytime Peace of Mind</p>
-            <p class="desc">Overnight and emergency reads are reported so your nightshift won’t be unproductive, leaving undetermined cases for the morning hours.</p>
-            <ul class="service-bullets">
-              <li>Rapid Access to Radiologists</li>
-              <li>Expedited Reporting for Decisive Action</li>
-              <li>Uninterrupted Expert Care Around the Clock</li>
-            </ul>
+            <p class="svc-panel-desc">Expert review for general ultrasound, Doppler vascular studies, anomaly scans, and pelvic diagnostic imagery.</p>
+            <div class="svc-panel-bullets">
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Color Doppler Vascular Reads</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Obstetric &amp; Fetal Anomaly Scans</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Abdominal &amp; Small Parts Review</strong></div></div>
+            </div>
+            <div class="svc-panel-footer">
+              <span class="svc-footer-chip">Doppler</span><span class="svc-footer-chip">Obstetric</span><span class="svc-footer-chip">Abdomen USG</span><span class="svc-footer-chip">Thyroid</span><span class="svc-footer-chip">Scrotal</span>
+            </div>
           </div>
-        </div>
 
-        <!-- 8. Second Opinions -->
-        <div class="col-12 col-md-6 col-lg-4 service-col" data-category="subspecialty">
-          <div class="service-card">
-            <div class="card-head">
-              <div class="icn">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <!-- Subspecialty -->
+          <div class="svc-panel" id="svc-subspecialty">
+            <div class="svc-panel-header">
+              <div class="svc-panel-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.3.3 0 1 0 .2.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg></div>
+              <div>
+                <span class="svc-panel-cat">Expert Interpretation</span>
+                <h3 class="svc-panel-title">Subspecialty Reads</h3>
+                <p class="svc-panel-sub">Domain-Specific Expert Interpretations</p>
               </div>
-              <span class="card-badge">🛡️ Peer Review</span>
+              <span class="svc-panel-badge">Board Certified</span>
             </div>
-            <h4>Second Opinions</h4>
-            <p class="subtitle">Clinical Certainty for Complex Cases</p>
-            <p class="desc">For your complex and/or conflicting cases, we provide an additional clinical level of certainty through independent subspecialty reviews.</p>
-            <ul class="service-bullets">
-              <li>Independent Quality Assurance Review</li>
-              <li>Detailed Peer Audit Reports</li>
-              <li>Conflict Resolution &amp; Expert Consensus</li>
-            </ul>
+            <p class="svc-panel-desc">Domain-specific imaging reads are reported by radiologists trained in Neuroradiology, Musculoskeletal Imaging, Cardiothoracic Imaging, Oncology and Obstetric Imaging.</p>
+            <div class="svc-panel-bullets">
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Neuro &amp; MSK Board Radiologists</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Cardiothoracic &amp; Vascular Specialists</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Oncology &amp; Obstetric Imaging</strong></div></div>
+            </div>
+            <div class="svc-panel-footer">
+              <span class="svc-footer-chip">Neuro</span><span class="svc-footer-chip">MSK</span><span class="svc-footer-chip">Cardiothoracic</span><span class="svc-footer-chip">Oncology</span><span class="svc-footer-chip">Obstetric</span>
+            </div>
           </div>
-        </div>
 
-        <!-- 9. Tele 3D Imaging & Post-Processing -->
-        <div class="col-12 col-md-6 col-lg-4 service-col" data-category="advanced">
-          <div class="service-card">
-            <div class="card-head">
-              <div class="icn">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          <!-- Nighthawk -->
+          <div class="svc-panel" id="svc-nighthawk">
+            <div class="svc-panel-header">
+              <div class="svc-panel-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></div>
+              <div>
+                <span class="svc-panel-cat">Emergency</span>
+                <h3 class="svc-panel-title">Nighthawk &amp; Stat Reads</h3>
+                <p class="svc-panel-sub">Nighttime Radiology Coverage, Daytime Peace of Mind</p>
               </div>
-              <span class="card-badge">📐 3D Post-Process</span>
+              <span class="svc-panel-badge stat">24/7 Nighthawk</span>
             </div>
-            <h4>Tele 3D Imaging &amp; Post-Processing</h4>
-            <p class="subtitle">Adding Depth to Detail: Enhanced 3D Reporting</p>
-            <p class="desc">Precision imaging for informed decisions with in-depth insights with 3D visualization for critical vascular and surgical planning.</p>
-            <ul class="service-bullets">
-              <li>Precision Imaging for Informed Decisions</li>
-              <li>In-Depth 3D Reconstruction Insights</li>
-              <li>Increased Confidence in Interpretations</li>
-            </ul>
+            <p class="svc-panel-desc">Overnight and emergency reads are reported so your nightshift won't be unproductive, leaving undetermined cases for the morning hours.</p>
+            <div class="svc-panel-bullets">
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Rapid Access to Radiologists</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Expedited Reporting for Decisive Action</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Uninterrupted Expert Care Around the Clock</strong></div></div>
+            </div>
+            <div class="svc-panel-footer">
+              <span class="svc-footer-chip">Overnight</span><span class="svc-footer-chip">Emergency</span><span class="svc-footer-chip">ED Coverage</span><span class="svc-footer-chip">ICU</span><span class="svc-footer-chip">Prelim Reads</span>
+            </div>
           </div>
-        </div>
 
-        <!-- 10. AI-Enabled RIS PACS Workflow -->
-        <div class="col-12 col-md-6 col-lg-4 service-col" data-category="advanced">
-          <div class="service-card">
-            <div class="card-head">
-              <div class="icn">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <!-- Second Opinions -->
+          <div class="svc-panel" id="svc-second">
+            <div class="svc-panel-header">
+              <div class="svc-panel-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div>
+              <div>
+                <span class="svc-panel-cat">Peer Review &amp; QA</span>
+                <h3 class="svc-panel-title">Second Opinions</h3>
+                <p class="svc-panel-sub">Clinical Certainty for Complex Cases</p>
               </div>
-              <span class="card-badge">🔌 DICOM Ready</span>
+              <span class="svc-panel-badge">Peer Review</span>
             </div>
-            <h4>AI-Enabled RIS PACS Workflow</h4>
-            <p class="subtitle">Intelligent Workflow, Inspired Care</p>
-            <p class="desc">Simplify, streamline, and future-proof your radiology department with seamless integration into existing hospital DICOM &amp; PACS systems.</p>
-            <ul class="service-bullets">
-              <li>Simplify, Streamline, Future-Proof</li>
-              <li>Seamless Integration with Existing Systems</li>
-              <li>AI-Assisted Analysis for Faster Reports</li>
-            </ul>
+            <p class="svc-panel-desc">For your complex and/or conflicting cases, we provide an additional clinical level of certainty through independent subspecialty reviews.</p>
+            <div class="svc-panel-bullets">
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Independent Quality Assurance Review</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Detailed Peer Audit Reports</strong></div></div>
+              <div class="svc-bullet"><span class="svc-bullet-dot"></span><div><strong>Conflict Resolution &amp; Expert Consensus</strong></div></div>
+            </div>
+            <div class="svc-panel-footer">
+              <span class="svc-footer-chip">Blinded Review</span><span class="svc-footer-chip">Discrepancy</span><span class="svc-footer-chip">Medico-legal</span><span class="svc-footer-chip">Consensus</span><span class="svc-footer-chip">Complex Cases</span>
+            </div>
           </div>
-        </div>
 
-        <!-- 11. Independent Quality Assurance -->
-        <div class="col-12 col-md-6 col-lg-4 service-col" data-category="subspecialty">
-          <div class="service-card">
-            <div class="card-head">
-              <div class="icn">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <span class="card-badge">📊 Audit &amp; QA</span>
-            </div>
-            <h4>Independent Quality Assurance</h4>
-            <p class="subtitle">Quality You Can Count On</p>
-            <p class="desc">Receive regular feedback, audit reports, and statistical analyses to minimize errors and continuously improve overall radiologic quality.</p>
-            <ul class="service-bullets">
-              <li>Targeted Peer Review &amp; Audits</li>
-              <li>Statistical Error Reduction Analyses</li>
-              <li>Transparent Service with No Hidden Costs</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+
+        </div><!-- /svc-detail-panel -->
+
+      </div><!-- /svc-explorer -->
     </div>
   </section>
 
@@ -467,22 +530,6 @@ export const tahMarkup = `
             <span class="why-quote-mark">&ldquo;</span>
             <p>Radio silence is the enemy of good patient care. We built our entire operation around the belief that a radiologist should be reachable, always.</p>
             <cite>- TAH Rad, Clinical Operations</cite>
-          </div>
-          <div class="why-ribbon">
-            <div class="why-ribbon-item">
-              <strong data-stat-val="centres">350+</strong>
-              <span>Centres Served</span>
-            </div>
-            <div class="why-ribbon-sep"></div>
-            <div class="why-ribbon-item">
-              <strong data-stat-val="radiologists">140+</strong>
-              <span>Radiologists On Call</span>
-            </div>
-            <div class="why-ribbon-sep"></div>
-            <div class="why-ribbon-item">
-              <strong>24/7</strong>
-              <span>Always Active</span>
-            </div>
           </div>
         </div>
       </div>
@@ -707,8 +754,8 @@ export const tahMarkup = `
   <!-- CONTACT SECTION -->
   <section class="contact" id="contact">
     <div class="container">
-      <div class="row g-5">
-        <div class="col-12 col-lg-5 contact-info reveal">
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-lg-6 contact-info reveal">
           <span class="eyebrow">GET IN TOUCH</span>
           <h2>Partner with Trust &amp; Hope Rad Today</h2>
           <p>Ready to eliminate radiology reporting delays and give your clinical team direct radiologist access? Reach out to schedule a demo or set up your hospital workflow.</p>
@@ -720,10 +767,10 @@ export const tahMarkup = `
           </div>
         </div>
 
-        <div class="col-12 col-lg-7 reveal">
+        <div class="col-12 col-lg-6 reveal">
           <form id="contact-form" class="contact-form">
-            <h3 style="font-size:22px; margin-bottom:20px; color:var(--deep-navy);">Request a Partnership Callback</h3>
-            <div class="row g-3">
+            <h3 style="font-size:19px; margin-bottom:14px; color:var(--deep-navy);">Request a Partnership Callback</h3>
+            <div class="row g-2">
               <div class="col-12 col-md-6 field">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" required placeholder="Dr. / Mr. / Ms. Name" autocomplete="name">
@@ -752,10 +799,10 @@ export const tahMarkup = `
               </div>
               <div class="col-12 field">
                 <label for="message">Message / Daily Scan Volume</label>
-                <textarea id="message" rows="3" placeholder="Tell us about your daily scan volume and reporting requirements..."></textarea>
+                <textarea id="message" rows="2" placeholder="Tell us about your daily scan volume and reporting requirements..."></textarea>
               </div>
             </div>
-            <button type="submit" class="submit-btn mt-3">Submit Request →</button>
+            <button type="submit" class="submit-btn mt-2">Submit Request →</button>
             <div id="form-msg">Thank you! Your request has been submitted. Our team will call you back shortly.</div>
           </form>
         </div>

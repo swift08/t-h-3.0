@@ -116,9 +116,9 @@ function OurTeam() {
             </Link>
             <nav className="links">
               <Link to="/">Home</Link>
-              <Link to="/#who-we-are">About Us</Link>
-              <Link to="/#services">Services</Link>
-              <Link to="/#contact">Contact</Link>
+              <Link to="/" hash="who-we-are">About Us</Link>
+              <Link to="/" hash="services">Services</Link>
+              <Link to="/" hash="contact">Contact</Link>
             </nav>
             <button className="burger" id="burger-btn" aria-label="Menu">
               <span></span>
@@ -131,13 +131,13 @@ function OurTeam() {
 
       <div className="mobile-drawer" id="mobile-drawer">
         <Link to="/">Home</Link>
-        <Link to="/#who-we-are">About Us</Link>
+        <Link to="/" hash="who-we-are">About Us</Link>
         <Link to="/our-team">Our Team</Link>
         <Link to="/where-we-work">Where We Work</Link>
         <Link to="/how-reporting-works">How It Works</Link>
-        <Link to="/#services">Services</Link>
-        <Link to="/#contact">Contact</Link>
-        <Link to="/#contact" className="nav-cta">
+        <Link to="/" hash="services">Services</Link>
+        <Link to="/" hash="contact">Contact</Link>
+        <Link to="/" hash="contact" className="nav-cta">
           Partner With Us
         </Link>
       </div>
@@ -323,7 +323,7 @@ function OurTeam() {
               <h5>Navigate</h5>
               <ul>
                 <li>
-                  <Link to="/#who-we-are">About Us</Link>
+                  <Link to="/" hash="who-we-are">About Us</Link>
                 </li>
                 <li>
                   <Link to="/our-team">Our Team</Link>
@@ -335,10 +335,10 @@ function OurTeam() {
                   <Link to="/how-reporting-works">How It Works</Link>
                 </li>
                 <li>
-                  <Link to="/#services">Services</Link>
+                  <Link to="/" hash="services">Services</Link>
                 </li>
                 <li>
-                  <Link to="/#contact">Contact</Link>
+                  <Link to="/" hash="contact">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -346,19 +346,19 @@ function OurTeam() {
               <h5>Modalities</h5>
               <ul>
                 <li>
-                  <Link to="/#services">CT Reporting</Link>
+                  <Link to="/" hash="services">CT Reporting</Link>
                 </li>
                 <li>
-                  <Link to="/#services">MRI Reporting</Link>
+                  <Link to="/" hash="services">MRI Reporting</Link>
                 </li>
                 <li>
-                  <Link to="/#services">X-Ray &amp; USG Reads</Link>
+                  <Link to="/" hash="services">X-Ray &amp; USG Reads</Link>
                 </li>
                 <li>
-                  <Link to="/#services">PET Oncology Scans</Link>
+                  <Link to="/" hash="services">PET Oncology Scans</Link>
                 </li>
                 <li>
-                  <Link to="/#services">Nighthawk &amp; Stat Reads</Link>
+                  <Link to="/" hash="services">Nighthawk &amp; Stat Reads</Link>
                 </li>
               </ul>
             </div>

@@ -159,52 +159,60 @@ function Index() {
       counters.forEach((el) => runCounter(el));
     }
 
-    // Service Category Filter Tabs Logic
-    const filterBtns = document.querySelectorAll<HTMLButtonElement>(".service-filter-btn");
-    const serviceCols = document.querySelectorAll<HTMLElement>(".service-col");
+    // Services Split-Panel Explorer Logic
+    const svcPills = document.querySelectorAll<HTMLButtonElement>(".svc-pill");
+    const svcPanels = document.querySelectorAll<HTMLElement>(".svc-panel");
 
-    filterBtns.forEach((btn) => {
-      const onFilterClick = () => {
-        const filter = btn.dataset.filter ?? "all";
-        filterBtns.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        serviceCols.forEach((col) => {
-          const cat = col.dataset.category ?? "";
-          if (filter === "all" || cat.includes(filter)) {
-            col.style.display = "block";
-            col.style.opacity = "1";
-            col.style.transform = "scale(1)";
+    svcPills.forEach((pill) => {
+      const onPillClick = () => {
+        const target = pill.dataset.svc;
+        // Update active pill
+        svcPills.forEach((p) => p.classList.remove("active"));
+        pill.classList.add("active");
+        // Show matching panel
+        svcPanels.forEach((panel) => {
+          if (panel.id === `svc-${target}`) {
+            panel.classList.add("active");
           } else {
-            col.style.display = "none";
-            col.style.opacity = "0";
-            col.style.transform = "scale(0.95)";
+            panel.classList.remove("active");
           }
         });
       };
-      btn.addEventListener("click", onFilterClick);
-      cleanups.push(() => btn.removeEventListener("click", onFilterClick));
+      pill.addEventListener("click", onPillClick);
+      cleanups.push(() => pill.removeEventListener("click", onPillClick));
     });
 
     // Hero PACS Video Playlist Logic (Sequential Playback)
-    const scanVideo = document.getElementById("hero-scan-video") as HTMLVideoElement | null;
-    if (scanVideo) {
-      const playlist = [
-        scanVideo.getAttribute("src") || "",
-        scanVideo.dataset.nextSrc || "",
-      ].filter(Boolean);
+    const videos = [
+      document.getElementById("hero-bg-video") as HTMLVideoElement | null,
+      document.getElementById("hero-scan-video") as HTMLVideoElement | null,
+    ].filter(Boolean) as HTMLVideoElement[];
+
+    videos.forEach((video) => {
+      video.play().catch(() => {});
+
+      const video1 = video.getAttribute("src") || "";
+      const video2 = video.dataset.nextSrc || "";
+      const playlist = [video1, video2].filter(Boolean);
+
+      if (playlist.length <= 1) return;
 
       let currentIdx = 0;
 
-      const onEnded = () => {
+      const playNext = () => {
         currentIdx = (currentIdx + 1) % playlist.length;
-        scanVideo.src = playlist[currentIdx];
-        scanVideo.play().catch(() => {});
+        video.src = playlist[currentIdx];
+        video.load();
+        video.play().catch(() => {});
       };
 
-      scanVideo.addEventListener("ended", onEnded);
-      cleanups.push(() => scanVideo.removeEventListener("ended", onEnded));
-    }
+      video.addEventListener("ended", playNext);
+      video.addEventListener("error", playNext);
+      cleanups.push(() => {
+        video.removeEventListener("ended", playNext);
+        video.removeEventListener("error", playNext);
+      });
+    });
 
     return () => cleanups.forEach((fn) => fn());
   }, []);
