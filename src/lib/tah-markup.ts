@@ -167,13 +167,14 @@ export const tahMarkup = `
   </section>
 
   <!-- HOW REPORTING WORKS SECTION -->
-  <section class="how-reporting-works" id="how-reporting-works" style="padding: 85px 0; background: var(--paper); border-bottom: 1px solid var(--line);">
+  <!-- HOW REPORTING WORKS SECTION -->
+  <section class="how-reporting-works" id="how-reporting-works" style="padding: 40px 0 30px 0; background: var(--paper); border-bottom: 1px solid var(--line);">
     <div class="container">
-      <div class="row justify-content-center text-center mb-5 reveal">
+      <div class="row justify-content-center text-center mb-3 reveal">
         <div class="col-12 col-lg-9">
-          <span class="eyebrow mb-2">FROM SCAN TO SIGNED REPORT, IN FIVE STEPS</span>
-          <h2 style="font-size: clamp(30px, 4vw, 48px); margin-top: 10px;">How Reporting Works</h2>
-          <p style="color: var(--muted-slate); font-size: 17.5px; max-width: 800px; margin: 0 auto;">Each of these steps is designed to facilitate the process of getting reports done, and is fully integrated with PACS.</p>
+          <span class="eyebrow mb-1">FROM SCAN TO SIGNED REPORT, IN FIVE STEPS</span>
+          <h2 style="font-size: clamp(26px, 3.5vw, 40px); margin-top: 6px; margin-bottom: 6px;">How Reporting Works</h2>
+          <p style="color: var(--muted-slate); font-size: 16px; max-width: 750px; margin: 0 auto;">Each of these steps is designed to facilitate the process of getting reports done, and is fully integrated with PACS.</p>
         </div>
       </div>
 
@@ -186,7 +187,9 @@ export const tahMarkup = `
               <div class="step-flip-inner">
                 <div class="step-flip-front">
                   <div>
-                    <span class="step-num-badge">01</span>
+                    <span class="step-num-badge" title="Study Received">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                    </span>
                     <div class="flip-title">1. Study Received</div>
                   </div>
                   <div class="flip-hint">
@@ -195,7 +198,9 @@ export const tahMarkup = `
                   </div>
                 </div>
                 <div class="step-flip-back step-detail-card">
-                  <span class="step-num-badge">01</span>
+                  <span class="step-num-badge">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                  </span>
                   <h3>1. Study Received</h3>
                   <p class="step-text">Images make their way to us from your PACS or modality.</p>
                   <div class="step-highlight">Direct DICOM router &amp; cloud PACS integration for instant data transfer.</div>
@@ -215,7 +220,9 @@ export const tahMarkup = `
               <div class="step-flip-inner">
                 <div class="step-flip-front">
                   <div>
-                    <span class="step-num-badge">02</span>
+                    <span class="step-num-badge" title="Radiologist Assigned">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="17" y1="11" x2="23" y2="11"></line></svg>
+                    </span>
                     <div class="flip-title">2. Radiologist Assigned</div>
                   </div>
                   <div class="flip-hint">
@@ -224,7 +231,9 @@ export const tahMarkup = `
                   </div>
                 </div>
                 <div class="step-flip-back step-detail-card">
-                  <span class="step-num-badge">02</span>
+                  <span class="step-num-badge">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="17" y1="11" x2="23" y2="11"></line></svg>
+                  </span>
                   <h3>2. Radiologist Assigned</h3>
                   <p class="step-text">The right radiologist is chosen based on the specialty and urgency.</p>
                   <div class="step-highlight">Smart routing across <span data-stat-val="radiologists">140+</span> fellowship-trained radiologists 24/7.</div>
@@ -244,7 +253,9 @@ export const tahMarkup = `
               <div class="step-flip-inner">
                 <div class="step-flip-front">
                   <div>
-                    <span class="step-num-badge">03</span>
+                    <span class="step-num-badge" title="Report Drafted">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    </span>
                     <div class="flip-title">3. Report Drafted</div>
                   </div>
                   <div class="flip-hint">
@@ -253,7 +264,9 @@ export const tahMarkup = `
                   </div>
                 </div>
                 <div class="step-flip-back step-detail-card">
-                  <span class="step-num-badge">03</span>
+                  <span class="step-num-badge">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                  </span>
                   <h3>3. Report Drafted</h3>
                   <p class="step-text">Critical findings are flagged for priority in structured format.</p>
                   <div class="step-highlight">Standardized templates with immediate phone callbacks for stat findings.</div>
@@ -273,7 +286,9 @@ export const tahMarkup = `
               <div class="step-flip-inner">
                 <div class="step-flip-front">
                   <div>
-                    <span class="step-num-badge">04</span>
+                    <span class="step-num-badge" title="Quality Check">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                    </span>
                     <div class="flip-title">4. Quality Check</div>
                   </div>
                   <div class="flip-hint">
@@ -282,7 +297,9 @@ export const tahMarkup = `
                   </div>
                 </div>
                 <div class="step-flip-back step-detail-card">
-                  <span class="step-num-badge">04</span>
+                  <span class="step-num-badge">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                  </span>
                   <h3>4. Quality Check</h3>
                   <p class="step-text">A second review ensures accuracy with clinical considerations.</p>
                   <div class="step-highlight">Multi-tier Quality Assurance and peer review audits for 100% precision.</div>
@@ -302,7 +319,9 @@ export const tahMarkup = `
               <div class="step-flip-inner">
                 <div class="step-flip-front">
                   <div>
-                    <span class="step-num-badge active-badge">05</span>
+                    <span class="step-num-badge active-badge" title="Report Delivered">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </span>
                     <div class="flip-title">5. Report Delivered</div>
                   </div>
                   <div class="flip-hint">
@@ -311,7 +330,9 @@ export const tahMarkup = `
                   </div>
                 </div>
                 <div class="step-flip-back step-detail-card" style="border-color: rgba(43, 168, 183, 0.4);">
-                  <span class="step-num-badge active-badge">05</span>
+                  <span class="step-num-badge active-badge">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  </span>
                   <h3>5. Report Delivered</h3>
                   <p class="step-text">The signed report is delivered with a direct query line to our system.</p>
                   <div class="step-highlight">Pushed back to PACS with doctor-to-doctor direct consultation line.</div>
@@ -331,7 +352,9 @@ export const tahMarkup = `
               <div class="step-flip-inner">
                 <div class="step-flip-front" style="background: linear-gradient(135deg, #0E2440 0%, #16355C 100%); color: #FFFFFF;">
                   <div>
-                    <span class="step-num-badge" style="background: rgba(255,255,255,0.15); color: #FFFFFF;">PACS</span>
+                    <span class="step-num-badge" style="background: rgba(255,255,255,0.15); color: #FFFFFF;" title="Fully Integrated PACS">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                    </span>
                     <div class="flip-title" style="color: #FFFFFF;">Fully Integrated PACS</div>
                   </div>
                   <div class="flip-hint" style="background: rgba(255,255,255,0.15); color: #E6EDF5;">
@@ -340,7 +363,9 @@ export const tahMarkup = `
                   </div>
                 </div>
                 <div class="step-flip-back step-detail-card" style="background: linear-gradient(135deg, #0E2440 0%, #16355C 100%); color: #FFFFFF;">
-                  <span class="step-num-badge" style="background: rgba(255,255,255,0.15); color: #FFFFFF;">PACS</span>
+                  <span class="step-num-badge" style="background: rgba(255,255,255,0.15); color: #FFFFFF;">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                  </span>
                   <h3 style="color: #FFFFFF;">Fully Integrated PACS</h3>
                   <p class="step-text" style="color: #D0DCED;">Hooks directly into DICOM feed to streamline report delivery.</p>
                   <div class="step-highlight" style="background: rgba(255,255,255,0.08); border-color: var(--teal); color: #E6EDF5;">Zero technical friction with IT support.</div>
