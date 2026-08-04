@@ -50,8 +50,8 @@ export const tahMarkup = `
           <p class="lead">From X-Rays to specialty MRIs, we cover the entire diagnostic imaging spectrum so you don't have to work with multiple vendors for different modalities.</p>
           
           <div class="hero-quick-nav mt-3 pt-2 d-flex flex-wrap gap-2">
-            <a href="/our-team" class="btn-custom btn-custom-ghost" style="padding: 9px 18px; font-size: 13.5px; border-color: rgba(43,168,183,0.35) !important; color: #FFFFFF !important; background: rgba(255,255,255,0.08) !important;">Our Team →</a>
-            <a href="/where-we-work" class="btn-custom btn-custom-ghost" style="padding: 9px 18px; font-size: 13.5px; border-color: rgba(43,168,183,0.35) !important; color: #FFFFFF !important; background: rgba(255,255,255,0.08) !important;">Where We Work →</a>
+            <a href="#services" class="btn-custom btn-custom-ghost" style="padding: 9px 18px; font-size: 13.5px; border-color: rgba(43,168,183,0.35) !important; color: #FFFFFF !important; background: rgba(255,255,255,0.08) !important;">Services →</a>
+            <a href="#contact" class="btn-custom btn-custom-ghost" style="padding: 9px 18px; font-size: 13.5px; border-color: rgba(43,168,183,0.35) !important; color: #FFFFFF !important; background: rgba(255,255,255,0.08) !important;">Contact Us →</a>
           </div>
         </div>
       </div>
@@ -177,85 +177,193 @@ export const tahMarkup = `
         </div>
       </div>
 
-      <!-- 5-STEP HORIZONTAL STEPPER -->
-      <div class="workflow-stepper reveal">
-        <div class="workflow-nodes">
-          <div class="workflow-node-item">
-            <div class="workflow-circle">1</div>
-            <div class="workflow-node-label">Imaging Centre</div>
+      <!-- DETAILED 5 STEPS PROCESS FLOW GRID -->
+      <div class="steps-flow-container reveal-stagger">
+        <!-- ROW 1: STEPS 1, 2, 3 -->
+        <div class="steps-flow-row">
+          <!-- STEP 1 -->
+          <div class="step-card-col">
+            <div class="step-flip-card" tabindex="0">
+              <div class="step-flip-inner">
+                <div class="step-flip-front">
+                  <div>
+                    <span class="step-num-badge">01</span>
+                    <div class="flip-title">1. Study Received</div>
+                  </div>
+                  <div class="flip-hint">
+                    <span>Hover to reveal details</span>
+                    <svg class="flip-icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  </div>
+                </div>
+                <div class="step-flip-back step-detail-card">
+                  <span class="step-num-badge">01</span>
+                  <h3>1. Study Received</h3>
+                  <p class="step-text">Images make their way to us from your PACS or modality.</p>
+                  <div class="step-highlight">Direct DICOM router &amp; cloud PACS integration for instant data transfer.</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="workflow-connector"><span></span><span></span></div>
-          <div class="workflow-node-item">
-            <div class="workflow-circle">2</div>
-            <div class="workflow-node-label">Secure Upload</div>
-          </div>
-          <div class="workflow-connector"><span></span><span></span></div>
-          <div class="workflow-node-item">
-            <div class="workflow-circle">3</div>
-            <div class="workflow-node-label">Radiologist Review</div>
-          </div>
-          <div class="workflow-connector"><span></span><span></span></div>
-          <div class="workflow-node-item">
-            <div class="workflow-circle">4</div>
-            <div class="workflow-node-label">Report Delivery</div>
-          </div>
-          <div class="workflow-connector"><span></span><span></span></div>
-          <div class="workflow-node-item">
-            <div class="workflow-circle highlight">5</div>
-            <div class="workflow-node-label">Patient Care</div>
-          </div>
-        </div>
-        <p class="workflow-caption">Seamless integration into existing medical workflows.</p>
-      </div>
 
-      <!-- DETAILED 5 STEPS GRID -->
-      <div class="row g-4 reveal-stagger">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="step-detail-card">
-            <span class="step-num-badge">01</span>
-            <h3>1. Study Received</h3>
-            <p class="step-text">Images make their way to us from your PACS or modality.</p>
-            <div class="step-highlight">Direct DICOM router &amp; cloud PACS integration for instant data transfer.</div>
+          <!-- ARROW 1 -> 2 -->
+          <div class="step-arrow-inline" title="Next Step">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="step-card-col">
+            <div class="step-flip-card" tabindex="0">
+              <div class="step-flip-inner">
+                <div class="step-flip-front">
+                  <div>
+                    <span class="step-num-badge">02</span>
+                    <div class="flip-title">2. Radiologist Assigned</div>
+                  </div>
+                  <div class="flip-hint">
+                    <span>Hover to reveal details</span>
+                    <svg class="flip-icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  </div>
+                </div>
+                <div class="step-flip-back step-detail-card">
+                  <span class="step-num-badge">02</span>
+                  <h3>2. Radiologist Assigned</h3>
+                  <p class="step-text">The right radiologist is chosen based on the specialty and the modality, as well as the urgency of the case.</p>
+                  <div class="step-highlight">Smart routing across <span data-stat-val="radiologists">140+</span> fellowship-trained radiologists 24/7/365.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ARROW 2 -> 3 -->
+          <div class="step-arrow-inline" title="Next Step">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="step-card-col">
+            <div class="step-flip-card" tabindex="0">
+              <div class="step-flip-inner">
+                <div class="step-flip-front">
+                  <div>
+                    <span class="step-num-badge">03</span>
+                    <div class="flip-title">3. Report Drafted</div>
+                  </div>
+                  <div class="flip-hint">
+                    <span>Hover to reveal details</span>
+                    <svg class="flip-icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  </div>
+                </div>
+                <div class="step-flip-back step-detail-card">
+                  <span class="step-num-badge">03</span>
+                  <h3>3. Report Drafted</h3>
+                  <p class="step-text">Critical findings are flagged for priority, and the report is done in a structured format.</p>
+                  <div class="step-highlight">Standardized reporting templates with immediate phone callbacks for stat findings.</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="step-detail-card">
-            <span class="step-num-badge">02</span>
-            <h3>2. Radiologist Assigned</h3>
-            <p class="step-text">The right radiologist is chosen based on the specialty and the modality, as well as the urgency of the case.</p>
-            <div class="step-highlight">Smart routing across <span data-stat-val="radiologists">140+</span> fellowship-trained radiologists 24/7/365.</div>
+
+        <!-- ROW CONNECTOR: STEP 3 -> STEP 4 LONG SWEEPING ARROW -->
+        <div class="steps-row-connector-long">
+          <div class="long-arrow-wrapper">
+            <svg viewBox="0 0 1000 56" preserveAspectRatio="none">
+              <defs>
+                <marker id="arrowhead-teal-long" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+                  <path d="M 0 0 L 8 4 L 0 8 z" fill="var(--teal)" />
+                </marker>
+              </defs>
+              <path class="long-arrow-path" d="M 850 6 C 850 48, 150 8, 150 48" marker-end="url(#arrowhead-teal-long)"></path>
+            </svg>
+            <div class="long-arrow-label" title="Flow to Step 4 (Quality Check)">
+              <span>Step 3 &rarr; Step 4</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="step-detail-card">
-            <span class="step-num-badge">03</span>
-            <h3>3. Report Drafted</h3>
-            <p class="step-text">Critical findings are flagged for priority, and the report is done in a structured format.</p>
-            <div class="step-highlight">Standardized reporting templates with immediate phone callbacks for stat findings.</div>
+
+        <!-- ROW 2: STEPS 4, 5, PACS -->
+        <div class="steps-flow-row">
+          <!-- STEP 4 -->
+          <div class="step-card-col">
+            <div class="step-flip-card" tabindex="0">
+              <div class="step-flip-inner">
+                <div class="step-flip-front">
+                  <div>
+                    <span class="step-num-badge">04</span>
+                    <div class="flip-title">4. Quality Check</div>
+                  </div>
+                  <div class="flip-hint">
+                    <span>Hover to reveal details</span>
+                    <svg class="flip-icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  </div>
+                </div>
+                <div class="step-flip-back step-detail-card">
+                  <span class="step-num-badge">04</span>
+                  <h3>4. Quality Check</h3>
+                  <p class="step-text">A second review is done to ensure accuracy and completeness of the report, with clinical considerations of the findings.</p>
+                  <div class="step-highlight">Multi-tier Quality Assurance and peer review audits for 100% precision.</div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="step-detail-card">
-            <span class="step-num-badge">04</span>
-            <h3>4. Quality Check</h3>
-            <p class="step-text">A second review is done to ensure accuracy and completeness of the report, with clinical considerations of the findings.</p>
-            <div class="step-highlight">Multi-tier Quality Assurance and peer review audits for 100% precision.</div>
+
+          <!-- ARROW 4 -> 5 -->
+          <div class="step-arrow-inline" title="Next Step">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="step-detail-card" style="border-color: rgba(43, 168, 183, 0.4);">
-            <span class="step-num-badge active-badge">05</span>
-            <h3>5. Report Delivered</h3>
-            <p class="step-text">The signed report is delivered with a direct query line to our system.</p>
-            <div class="step-highlight">Pushed back to your PACS with doctor-to-doctor direct consultation line.</div>
+
+          <!-- STEP 5 -->
+          <div class="step-card-col">
+            <div class="step-flip-card" tabindex="0">
+              <div class="step-flip-inner">
+                <div class="step-flip-front">
+                  <div>
+                    <span class="step-num-badge active-badge">05</span>
+                    <div class="flip-title">5. Report Delivered</div>
+                  </div>
+                  <div class="flip-hint">
+                    <span>Hover to reveal details</span>
+                    <svg class="flip-icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  </div>
+                </div>
+                <div class="step-flip-back step-detail-card" style="border-color: rgba(43, 168, 183, 0.4);">
+                  <span class="step-num-badge active-badge">05</span>
+                  <h3>5. Report Delivered</h3>
+                  <p class="step-text">The signed report is delivered with a direct query line to our system.</p>
+                  <div class="step-highlight">Pushed back to your PACS with doctor-to-doctor direct consultation line.</div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="step-detail-card" style="background: linear-gradient(135deg, #0E2440 0%, #16355C 100%); color: #FFFFFF;">
-            <span class="step-num-badge" style="background: rgba(255,255,255,0.15); color: #FFFFFF;">PACS</span>
-            <h3 style="color: #FFFFFF;">Fully Integrated PACS</h3>
-            <p class="step-text" style="color: #D0DCED;">No manual uploading required. Our system hooks directly into your existing DICOM feed to streamline scan reception and report delivery.</p>
-            <div class="step-highlight" style="background: rgba(255,255,255,0.08); border-color: var(--teal); color: #E6EDF5;">Zero technical friction. Complete setup support provided by our IT team.</div>
+
+          <!-- ARROW 5 -> PACS -->
+          <div class="step-arrow-inline" title="Next Step">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+
+          <!-- PACS FEATURE CARD -->
+          <div class="step-card-col">
+            <div class="step-flip-card" tabindex="0">
+              <div class="step-flip-inner">
+                <div class="step-flip-front" style="background: linear-gradient(135deg, #0E2440 0%, #16355C 100%); color: #FFFFFF;">
+                  <div>
+                    <span class="step-num-badge" style="background: rgba(255,255,255,0.15); color: #FFFFFF;">PACS</span>
+                    <div class="flip-title" style="color: #FFFFFF;">Fully Integrated PACS</div>
+                  </div>
+                  <div class="flip-hint" style="background: rgba(255,255,255,0.15); color: #E6EDF5;">
+                    <span>Hover to reveal details</span>
+                    <svg class="flip-icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  </div>
+                </div>
+                <div class="step-flip-back step-detail-card" style="background: linear-gradient(135deg, #0E2440 0%, #16355C 100%); color: #FFFFFF;">
+                  <span class="step-num-badge" style="background: rgba(255,255,255,0.15); color: #FFFFFF;">PACS</span>
+                  <h3 style="color: #FFFFFF;">Fully Integrated PACS</h3>
+                  <p class="step-text" style="color: #D0DCED;">No manual uploading required. Our system hooks directly into your existing DICOM feed to streamline scan reception and report delivery.</p>
+                  <div class="step-highlight" style="background: rgba(255,255,255,0.08); border-color: var(--teal); color: #E6EDF5;">Zero technical friction. Complete setup support provided by our IT team.</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -286,42 +394,34 @@ export const tahMarkup = `
             <button class="svc-pill active" data-svc="ct">
               <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="7" y1="12" x2="17" y2="12"/></svg></span>
               <span class="svc-pill-name">CT Reporting</span>
-              <span class="svc-pill-tag">STAT</span>
             </button>
             <button class="svc-pill" data-svc="mri">
               <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 5v13"/></svg></span>
               <span class="svc-pill-name">MRI Reporting</span>
-              <span class="svc-pill-tag">Sub</span>
             </button>
             <button class="svc-pill" data-svc="xray">
               <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 8V1"/><path d="M12 16v7"/><path d="m15.5 10 6-3.5"/><path d="m8.5 14-6 3.5"/><path d="m15.5 14 6 3.5"/><path d="m8.5 10-6-3.5"/></svg></span>
               <span class="svc-pill-name">X-Ray Reporting</span>
-              <span class="svc-pill-tag">24/7</span>
             </button>
             <button class="svc-pill" data-svc="pet">
               <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><ellipse cx="12" cy="12" rx="9" ry="3"/><ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(120 12 12)"/></svg></span>
               <span class="svc-pill-name">PET Reporting</span>
-              <span class="svc-pill-tag">Onco</span>
             </button>
             <button class="svc-pill" data-svc="usg">
               <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
               <span class="svc-pill-name">USG Reporting</span>
-              <span class="svc-pill-tag">Doppler</span>
             </button>
             <button class="svc-pill" data-svc="subspecialty">
               <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.3.3 0 1 0 .2.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg></span>
               <span class="svc-pill-name">Subspecialty Reads</span>
-              <span class="svc-pill-tag">Cert</span>
             </button>
             <button class="svc-pill" data-svc="nighthawk">
               <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
               <span class="svc-pill-name">Nighthawk &amp; Stat</span>
-              <span class="svc-pill-tag">Night</span>
             </button>
             <button class="svc-pill" data-svc="second">
               <span class="svc-pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span>
               <span class="svc-pill-name">Second Opinions</span>
-              <span class="svc-pill-tag">QA</span>
             </button>
 
           </div>

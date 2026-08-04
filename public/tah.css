@@ -1674,22 +1674,125 @@ footer ul a:hover { color: var(--teal) !important; }
   text-align: center;
 }
 
-/* Step Detail Cards */
+/* Step Detail 3D Flip Cards */
+.step-flip-card {
+  perspective: 1000px;
+  height: 160px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: z-index 0.3s ease;
+}
+.step-flip-card:hover,
+.step-flip-card:focus-within,
+.step-flip-card:active {
+  z-index: 30;
+}
+.step-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+  border-radius: 18px;
+}
+.step-flip-card:hover .step-flip-inner,
+.step-flip-card:focus-within .step-flip-inner,
+.step-flip-card:active .step-flip-inner {
+  transform: rotateY(180deg);
+  height: 280px;
+}
+.step-flip-front,
+.step-flip-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.step-flip-front {
+  height: 160px;
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(43, 168, 183, 0.3);
+  box-shadow: 0 6px 20px rgba(43, 168, 183, 0.1), 0 0 12px rgba(43, 168, 183, 0.05);
+  transform: rotateY(0deg);
+  transition: all 0.3s ease;
+}
+.step-flip-card:hover .step-flip-front {
+  border-color: #2BA8B7;
+  box-shadow: 0 16px 40px rgba(43, 168, 183, 0.28), 0 0 30px rgba(43, 168, 183, 0.25);
+}
+.step-flip-front .flip-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.step-flip-front .flip-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--deep-navy);
+  margin-top: 8px;
+  line-height: 1.25;
+}
+.step-flip-front .flip-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal);
+  background: rgba(43, 168, 183, 0.08);
+  padding: 6px 12px;
+  border-radius: 18px;
+  width: fit-content;
+  margin-top: auto;
+  transition: all 0.3s ease;
+}
+.step-flip-card:hover .step-flip-front .flip-hint {
+  background: var(--teal);
+  color: #ffffff;
+}
+.flip-icon-spin {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.6s ease;
+}
+.step-flip-card:hover .flip-icon-spin {
+  transform: rotate(180deg);
+}
+.step-flip-back {
+  height: 280px;
+  padding: 24px 22px;
+  transform: rotateY(180deg);
+  box-shadow: 0 16px 45px rgba(43, 168, 183, 0.3), 0 0 25px rgba(43, 168, 183, 0.2);
+}
+
 .step-detail-card {
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(43, 168, 183, 0.3);
   border-radius: 18px;
-  padding: 32px;
+  padding: 28px 24px;
   height: 100%;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 8px 30px rgba(43, 168, 183, 0.12), 0 0 15px rgba(43, 168, 183, 0.08);
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 .step-detail-card:hover {
-  transform: translateY(-5px);
   border-color: #2BA8B7;
   box-shadow: 0 16px 40px rgba(43, 168, 183, 0.28), 0 0 30px rgba(43, 168, 183, 0.25);
 }
@@ -1705,7 +1808,7 @@ footer ul a:hover { color: var(--teal) !important; }
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .step-num-badge.active-badge {
   background: var(--teal);
@@ -1992,6 +2095,152 @@ img {
 @media (max-width: 991px) {
   .team-photo-img {
     height: 340px;
+  }
+}
+
+/* Hide Service Pill Tags & Workflow Stepper Bar */
+.svc-pill-tag,
+.workflow-stepper {
+  display: none !important;
+}
+
+/* Steps Flow Grid & Inline Arrows */
+.steps-flow-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.steps-flow-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.step-card-col {
+  flex: 1;
+  min-width: 0;
+}
+
+@keyframes arrowPulse {
+  0%, 100% {
+    box-shadow: 0 4px 14px rgba(43, 168, 183, 0.3), 0 0 10px rgba(43, 168, 183, 0.15);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 6px 22px rgba(43, 168, 183, 0.55), 0 0 18px rgba(43, 168, 183, 0.35);
+    transform: scale(1.12);
+  }
+}
+
+.step-arrow-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid var(--teal);
+  color: var(--teal);
+  box-shadow: 0 4px 14px rgba(43, 168, 183, 0.22);
+  animation: arrowPulse 2.5s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+/* Long Connector Arrow between Row 1 (Card 3) and Row 2 (Card 4) */
+.steps-row-connector-long {
+  position: relative;
+  width: 100%;
+  margin: -8px 0 6px 0;
+  padding: 0;
+}
+
+.long-arrow-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.long-arrow-wrapper svg {
+  width: 100%;
+  height: 56px;
+  overflow: visible;
+}
+
+@keyframes dashFlow {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.long-arrow-path {
+  stroke: var(--teal);
+  stroke-width: 2.5;
+  stroke-dasharray: 6 4;
+  animation: dashFlow 1.8s linear infinite;
+}
+
+.long-arrow-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: #ffffff;
+  border: 1.5px solid var(--teal);
+  border-radius: 20px;
+  color: var(--teal);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(43, 168, 183, 0.2);
+  transition: all 0.3s ease;
+}
+
+.long-arrow-label:hover {
+  background: var(--teal);
+  color: #FFFFFF;
+}
+
+.long-arrow-label:hover svg {
+  stroke: #FFFFFF;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 991px) {
+  .steps-flow-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .step-card-col {
+    width: 100%;
+  }
+  .step-arrow-inline {
+    transform: rotate(90deg);
+    margin: 2px auto;
+  }
+  .steps-row-connector-long {
+    margin: 4px 0;
+  }
+  .long-arrow-wrapper svg {
+    display: none;
+  }
+  .long-arrow-label {
+    position: static;
+    transform: none;
+    margin: 4px auto;
   }
 }
 @media (max-width: 576px) {
