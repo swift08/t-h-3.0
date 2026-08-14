@@ -20,7 +20,11 @@ export const tahMarkup = `
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="burger" id="burger-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+      <div class="d-flex align-items-center gap-3">
+        <a href="https://pacs.trustandhoperad.com/login" target="_blank" rel="noopener noreferrer" class="nav-cta nav-cta-desktop">Login</a>
+        <button class="burger" id="burger-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -33,6 +37,7 @@ export const tahMarkup = `
   <a href="#services">Services</a>
   <a href="#why-us">Why Us</a>
   <a href="#contact">Contact</a>
+  <a href="https://pacs.trustandhoperad.com/login" target="_blank" rel="noopener noreferrer" class="nav-cta btn-glow mb-2">Login</a>
   <a href="#contact" class="nav-cta btn-glow">Partner With Us</a>
 </div>
 

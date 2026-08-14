@@ -120,11 +120,21 @@ function WhereWeWork() {
               <Link to="/" hash="services">Services</Link>
               <Link to="/" hash="contact">Contact</Link>
             </nav>
-            <button className="burger" id="burger-btn" aria-label="Menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
+            <div className="d-flex align-items-center gap-3">
+              <a
+                href="https://pacs.trustandhoperad.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-cta nav-cta-desktop"
+              >
+                Login
+              </a>
+              <button className="burger" id="burger-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -137,6 +147,14 @@ function WhereWeWork() {
         <Link to="/how-reporting-works">How It Works</Link>
         <Link to="/" hash="services">Services</Link>
         <Link to="/" hash="contact">Contact</Link>
+        <a
+          href="https://pacs.trustandhoperad.com/login"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-cta mb-2"
+        >
+          Login
+        </a>
         <Link to="/" hash="contact" className="nav-cta">
           Partner With Us
         </Link>

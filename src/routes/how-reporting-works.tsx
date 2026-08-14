@@ -127,11 +127,21 @@ function HowReportingWorks() {
               <Link to="/" hash="services">Services</Link>
               <Link to="/" hash="contact">Contact</Link>
             </nav>
-            <button className="burger" id="burger-btn" aria-label="Menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
+            <div className="d-flex align-items-center gap-3">
+              <a
+                href="https://pacs.trustandhoperad.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-cta nav-cta-desktop"
+              >
+                Login
+              </a>
+              <button className="burger" id="burger-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -143,6 +153,14 @@ function HowReportingWorks() {
         <Link to="/how-reporting-works">How It Works</Link>
         <Link to="/" hash="why-us">Why Us</Link>
         <Link to="/" hash="contact">Contact</Link>
+        <a
+          href="https://pacs.trustandhoperad.com/login"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-cta mb-2"
+        >
+          Login
+        </a>
         <Link to="/" hash="contact" className="nav-cta">
           Partner With Us
         </Link>
