@@ -112,6 +112,89 @@ img { max-width: 100%; display: block; }
 section { padding: 90px 0; }
 @media (max-width: 768px) { section { padding: 50px 0; } }
 
+/* ---------- SOCIAL LINKS UTILITIES ---------- */
+.topbar-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.topbar-social-link {
+  color: #8DA5C4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.25s ease;
+  text-decoration: none !important;
+}
+.topbar-social-link:hover {
+  color: #FFFFFF !important;
+  background: var(--teal);
+  border-color: var(--teal);
+  transform: translateY(-2px);
+}
+.topbar-social-link.wa-hover:hover {
+  background: #25D366;
+  border-color: #25D366;
+}
+.topbar-social-link.fb-hover:hover {
+  background: #1877F2;
+  border-color: #1877F2;
+}
+.topbar-social-link.li-hover:hover {
+  background: #0A66C2;
+  border-color: #0A66C2;
+}
+.topbar-social-link.ig-hover:hover {
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  border-color: transparent;
+}
+
+/* ---------- FLOATING WHATSAPP BUTTON ---------- */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #FFFFFF !important;
+  padding: 10px 18px 10px 14px;
+  border-radius: 50px;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: var(--font-body);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: wa-pulse 3s infinite;
+}
+.floating-whatsapp:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+  color: #FFFFFF !important;
+}
+.floating-whatsapp svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+@keyframes wa-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+@media (max-width: 576px) {
+  .floating-whatsapp span { display: none; }
+  .floating-whatsapp { padding: 12px; border-radius: 50%; bottom: 20px; right: 20px; }
+}
+
 /* ---------- NAV (FIXED TOP NAVBAR) ---------- */
 header.nav {
   position: fixed !important;
@@ -202,6 +285,20 @@ nav.links a:hover { color: var(--teal) !important; }
 
 .hero .eyebrow { color: var(--teal); }
 .hero .eyebrow::before { background: var(--teal); }
+.highlight-247-badge {
+  background: #00E6FF;
+  color: #081B33;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+  box-shadow: 0 0 16px rgba(0, 230, 255, 0.7);
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  margin-right: 2px;
+}
 .hero h1 {
   color: #FFFFFF !important;
   font-size: clamp(32px, 4.2vw, 54px);
@@ -638,7 +735,9 @@ nav.links a:hover { color: var(--teal) !important; }
 
 /* ---------- MISSION & VISION ---------- */
 .mission-vision {
-  background: var(--paper); border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 28px;
 }
 .mv-card {
   border-radius: 18px; padding: 36px 32px; position: relative; overflow: hidden;
@@ -670,12 +769,30 @@ nav.links a:hover { color: var(--teal) !important; }
   color: var(--muted-slate); margin-bottom: 16px;
 }
 .philosophy-pills {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 24px;
 }
 .philosophy-pill {
-  border: 1.5px solid var(--teal); color: var(--navy-blue); font-family: var(--font-heading);
-  font-size: 13.5px; font-weight: 600; padding: 8px 18px; border-radius: 100px; background: #FFFFFF;
-  box-shadow: 0 4px 12px rgba(43, 168, 183, 0.08); display: inline-block;
+  border: none;
+  color: var(--navy-blue);
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: default;
+}
+.philosophy-pill .pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 /* ---------- SERVICES EXPLORER (SPLIT-PANEL REDESIGN) ---------- */
@@ -973,24 +1090,42 @@ nav.links a:hover { color: var(--teal) !important; }
 .svc-panel-footer {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  padding-top: 16px;
+  align-items: baseline;
+  gap: 0;
+  padding-top: 14px;
   border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--muted-slate);
+}
+.svc-footer-label {
+  display: none;
 }
 .svc-footer-chip {
   font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 600;
-  padding: 5px 12px;
-  border-radius: 100px;
-  background: rgba(14, 36, 64, 0.06);
-  border: 1px solid rgba(14, 36, 64, 0.12);
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
   color: var(--navy-blue);
-  transition: all 0.2s ease;
+  display: inline;
+  cursor: default;
+  user-select: none;
+}
+.svc-footer-chip::before {
+  content: "#";
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 11px;
+  opacity: 0.9;
+}
+/* comma separator between chips */
+.svc-footer-chip + .svc-footer-chip {
+  margin-left: 14px;
 }
 .svc-footer-chip:hover {
-  background: rgba(43, 168, 183, 0.12);
-  border-color: rgba(43, 168, 183, 0.4);
   color: var(--teal);
 }
 
@@ -1682,19 +1817,21 @@ footer ul a:hover { color: var(--teal) !important; }
   cursor: pointer;
   position: relative;
   z-index: 1;
-  transition: z-index 0s;
+  transition: height 0.35s cubic-bezier(0.16, 1, 0.3, 1), z-index 0s;
 }
 .step-flip-card:hover,
 .step-flip-card:focus-within,
 .step-flip-card:active,
 .step-flip-card.is-flipped {
   z-index: 40;
+  height: auto;
+  min-height: 160px;
 }
 .step-flip-inner {
   position: relative;
   width: 100%;
   height: 160px;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   transform-style: preserve-3d;
   border-radius: 16px;
 }
@@ -1818,14 +1955,18 @@ footer ul a:hover { color: var(--teal) !important; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   background: rgba(43, 168, 183, 0.12);
   color: var(--teal);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   transition: all 0.3s ease;
   flex-shrink: 0;
+}
+.step-num-badge svg {
+  width: 24px;
+  height: 24px;
 }
 .step-num-badge.active-badge {
   background: var(--teal);
@@ -1837,13 +1978,17 @@ footer ul a:hover { color: var(--teal) !important; }
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 8px;
 }
 
 .steps-flow-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1px;
   width: 100%;
+}
+.steps-flow-row .step-arrow-inline {
+  margin-top: 73px; /* optically center against 160px front face */
 }
 .step-detail-card h3 {
   font-size: 12px;
@@ -1853,37 +1998,24 @@ footer ul a:hover { color: var(--teal) !important; }
   line-height: 1.2;
   text-align: left !important;
 }
-.step-detail-card .step-text {
-  font-size: 10.5px;
+.step-detail-card .step-text,
+.step-detail-card p.step-text {
+  font-size: 11px;
   color: #4A5568;
-  line-height: 1.3;
+  line-height: 1.4;
   margin-bottom: 0;
   text-align: left !important;
 }
 .step-detail-card .step-highlight {
-  font-size: 10px;
-  line-height: 1.3;
-  padding: 5px 7px;
+  font-size: 10.5px;
+  line-height: 1.35;
+  padding: 6px 8px;
   background: rgba(43, 168, 183, 0.08);
   border-left: 2px solid var(--teal);
   border-radius: 4px;
   color: var(--navy);
-  margin-top: 0;
+  margin-top: 4px;
   text-align: left !important;
-}
-.step-detail-card p.step-text {
-  font-size: 15.5px;
-  color: var(--navy-blue);
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-.step-detail-card .step-highlight {
-  font-size: 13.5px;
-  color: var(--muted-slate);
-  background: var(--paper);
-  padding: 10px 14px;
-  border-radius: 8px;
-  border-left: 3px solid var(--teal);
 }
 
 /* ---------- TV NEWS CHANNEL TICKER BAR (WHERE WE WORK) ---------- */
@@ -2157,15 +2289,9 @@ img {
 }
 
 /* Steps Flow Grid & Inline Arrows (Single Line 6-Card Layout) */
-.steps-flow-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
 .steps-flow-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1px;
   width: 100%;
 }
@@ -2208,12 +2334,18 @@ img {
     flex-direction: column;
     gap: 16px;
   }
+  .steps-flow-row .step-arrow-inline {
+    margin-top: 0;
+    margin: 2px auto;
+  }
   .step-card-col {
     width: 100%;
   }
   .step-arrow-inline {
-    transform: rotate(90deg);
     margin: 2px auto;
+  }
+  .step-arrow-inline svg {
+    transform: rotate(90deg);
   }
   .steps-row-connector-long {
     margin: 4px 0;

@@ -45,7 +45,7 @@ export const tahMarkup = `
     <div class="container">
       <div class="row g-4 align-items-center">
         <div class="col-12 col-lg-9 col-xl-8 reveal">
-          <span class="eyebrow">24×7 Teleradiology Reporting</span>
+          <span class="eyebrow"><span class="highlight-247-badge">24×7</span> Teleradiology Reporting</span>
           <h1>FULL-SPECTRUM TELERADIOLOGY,<br><em>ONE REPORTING PARTNER</em></h1>
           <p class="lead">From X-Rays to specialty MRIs, we cover the entire diagnostic imaging spectrum so you don't have to work with multiple vendors for different modalities.</p>
           
@@ -123,7 +123,6 @@ export const tahMarkup = `
     <div class="container">
       <div class="row justify-content-center text-center mb-4 reveal">
         <div class="col-12 col-lg-8">
-          <span class="eyebrow">MISSION &amp; VISION</span>
           <h2>Improving the speed and quality of clinical decisions</h2>
           <p style="color:var(--muted-slate); font-size:16px;">We empower hospitals, diagnostic centres, and clinical teams across India with remote diagnostic interpretations that you can trust implicitly.</p>
         </div>
@@ -136,7 +135,7 @@ export const tahMarkup = `
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
             <span class="eyebrow mb-2">OUR MISSION</span>
-            <h3>Timely, precise, high-quality care</h3>
+            <h3>Timely, precise, high-quality reporting</h3>
             <p>Enhance healthcare delivery through timely, precise, and high-quality tele-radiology services.</p>
           </div>
         </div>
@@ -144,7 +143,7 @@ export const tahMarkup = `
         <div class="col-12 col-md-6">
           <div class="mv-card vision">
             <div class="icon-badge">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg>
             </div>
             <span class="eyebrow mb-2" style="color:var(--teal);">OUR VISION</span>
             <h3>A global leader in tele-radiology</h3>
@@ -156,19 +155,18 @@ export const tahMarkup = `
       <div class="philosophy-bar reveal">
         <h5>SERVICE PHILOSOPHY</h5>
         <div class="philosophy-pills">
-          <span class="philosophy-pill">Accuracy</span>
-          <span class="philosophy-pill">Speed</span>
-          <span class="philosophy-pill">Reliability</span>
-          <span class="philosophy-pill">Workflow Optimization</span>
-          <span class="philosophy-pill">Patient Care</span>
+          <span class="philosophy-pill"><span class="pill-dot"></span> Accuracy</span>
+          <span class="philosophy-pill"><span class="pill-dot"></span> Speed</span>
+          <span class="philosophy-pill"><span class="pill-dot"></span> Reliability</span>
+          <span class="philosophy-pill"><span class="pill-dot"></span> Workflow Optimization</span>
+          <span class="philosophy-pill"><span class="pill-dot"></span> Patient Care</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- HOW REPORTING WORKS SECTION -->
-  <!-- HOW REPORTING WORKS SECTION -->
-  <section class="how-reporting-works" id="how-reporting-works" style="padding: 40px 0 30px 0; background: var(--paper); border-bottom: 1px solid var(--line);">
+  <section class="how-reporting-works" id="how-reporting-works" style="padding: 16px 0 30px 0; background: var(--paper); border-bottom: 1px solid var(--line);">
     <div class="container">
       <div class="row justify-content-center text-center mb-3 reveal">
         <div class="col-12 col-lg-9">
@@ -178,7 +176,7 @@ export const tahMarkup = `
         </div>
       </div>
 
-      <!-- DETAILED 5 STEPS PROCESS FLOW GRID (SINGLE LINE LAYOUT) -->
+      <!-- DETAILED PROCESS FLOW GRID (SINGLE LINE LAYOUT) -->
       <div class="steps-flow-container reveal-stagger">
         <div class="steps-flow-row">
           <!-- STEP 1 -->
@@ -187,10 +185,10 @@ export const tahMarkup = `
               <div class="step-flip-inner">
                 <div class="step-flip-front">
                   <div>
-                    <span class="step-num-badge" title="Study Received">
-                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18"></path><path d="M6 12H4a2 2 0 0 0-2 2v8h20v-8a2 2 0 0 0-2-2h-2"></path><line x1="10" y1="6" x2="14" y2="6"></line><line x1="10" y1="10" x2="14" y2="10"></line><line x1="10" y1="14" x2="14" y2="14"></line><line x1="10" y1="18" x2="14" y2="18"></line></svg>
+                    <span class="step-num-badge" title="Image acquisition">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16.2A4.5 4.5 0 0 0 17.5 8h-1.8A7 7 0 1 0 2 14.9"></path><rect x="9" y="13" width="6" height="5" rx="1"></rect><path d="M10 13v-1.5a2 2 0 0 1 4 0V13"></path></svg>
                     </span>
-                    <div class="flip-title">1. Study Received</div>
+                    <div class="flip-title">Image acquisition</div>
                   </div>
                   <div class="flip-hint">
                     <span>Hover</span>
@@ -199,11 +197,11 @@ export const tahMarkup = `
                 </div>
                 <div class="step-flip-back step-detail-card">
                   <span class="step-num-badge">
-                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18"></path><path d="M6 12H4a2 2 0 0 0-2 2v8h20v-8a2 2 0 0 0-2-2h-2"></path><line x1="10" y1="6" x2="14" y2="6"></line><line x1="10" y1="10" x2="14" y2="10"></line><line x1="10" y1="14" x2="14" y2="14"></line><line x1="10" y1="18" x2="14" y2="18"></line></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16.2A4.5 4.5 0 0 0 17.5 8h-1.8A7 7 0 1 0 2 14.9"></path><rect x="9" y="13" width="6" height="5" rx="1"></rect><path d="M10 13v-1.5a2 2 0 0 1 4 0V13"></path></svg>
                   </span>
-                  <h3>1. Study Received</h3>
-                  <p class="step-text">Images make their way to us from your PACS or modality.</p>
-                  <div class="step-highlight">Direct DICOM router &amp; cloud PACS integration for instant data transfer.</div>
+                  <h3>Image acquisition</h3>
+                  <p class="step-text">A technologist at the hospital or diagnostic centre acquires the scan using standard imaging equipment (X-ray, CT, MRI, or mammography machine).</p>
+                  <div class="step-highlight">The images are stored in DICOM format, the universal standard for medical imaging.</div>
                 </div>
               </div>
             </div>
@@ -220,10 +218,10 @@ export const tahMarkup = `
               <div class="step-flip-inner">
                 <div class="step-flip-front">
                   <div>
-                    <span class="step-num-badge" title="Radiologist Assigned">
-                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"></circle><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path></svg>
+                    <span class="step-num-badge" title="Secure transmission">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                     </span>
-                    <div class="flip-title">2. Radiologist Assigned</div>
+                    <div class="flip-title">Secure transmission</div>
                   </div>
                   <div class="flip-hint">
                     <span>Hover</span>
@@ -232,11 +230,11 @@ export const tahMarkup = `
                 </div>
                 <div class="step-flip-back step-detail-card">
                   <span class="step-num-badge">
-                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"></circle><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                   </span>
-                  <h3>2. Radiologist Assigned</h3>
-                  <p class="step-text">The right radiologist is chosen based on the specialty and urgency.</p>
-                  <div class="step-highlight">Smart routing across <span data-stat-val="radiologists">140+</span> fellowship-trained radiologists 24/7.</div>
+                  <h3>Secure transmission</h3>
+                  <p class="step-text">The DICOM images are transmitted securely from the facility's PACS (Picture Archiving and Communication System) to the teleradiology platform.</p>
+                  <div class="step-highlight">Transmission uses encrypted channels compliant with healthcare data standards.</div>
                 </div>
               </div>
             </div>
@@ -253,10 +251,10 @@ export const tahMarkup = `
               <div class="step-flip-inner">
                 <div class="step-flip-front">
                   <div>
-                    <span class="step-num-badge" title="Report Drafted">
-                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    <span class="step-num-badge" title="Radiologist interpretation">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"></circle><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path></svg>
                     </span>
-                    <div class="flip-title">3. Report Drafted</div>
+                    <div class="flip-title">Radiologist interpretation</div>
                   </div>
                   <div class="flip-hint">
                     <span>Hover</span>
@@ -265,11 +263,10 @@ export const tahMarkup = `
                 </div>
                 <div class="step-flip-back step-detail-card">
                   <span class="step-num-badge">
-                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"></circle><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path></svg>
                   </span>
-                  <h3>3. Report Drafted</h3>
-                  <p class="step-text">Critical findings are flagged for priority in structured format.</p>
-                  <div class="step-highlight">Standardized templates with immediate phone callbacks for stat findings.</div>
+                  <h3>Radiologist interpretation</h3>
+                  <p class="step-text">A board-certified radiologist reviews the images, identifies pathologies, and generates the draft report.</p>
                 </div>
               </div>
             </div>
@@ -287,9 +284,9 @@ export const tahMarkup = `
                 <div class="step-flip-front">
                   <div>
                     <span class="step-num-badge" title="Quality Check">
-                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16.2A4.5 4.5 0 0 0 17.5 8h-1.8A7 7 0 1 0 2 14.9"></path><rect x="9" y="13" width="6" height="5" rx="1"></rect><path d="M10 13v-1.5a2 2 0 0 1 4 0V13"></path></svg>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
                     </span>
-                    <div class="flip-title">4. Quality Check</div>
+                    <div class="flip-title">Quality Check</div>
                   </div>
                   <div class="flip-hint">
                     <span>Hover</span>
@@ -298,64 +295,30 @@ export const tahMarkup = `
                 </div>
                 <div class="step-flip-back step-detail-card">
                   <span class="step-num-badge">
-                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16.2A4.5 4.5 0 0 0 17.5 8h-1.8A7 7 0 1 0 2 14.9"></path><rect x="9" y="13" width="6" height="5" rx="1"></rect><path d="M10 13v-1.5a2 2 0 0 1 4 0V13"></path></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
                   </span>
-                  <h3>4. Quality Check</h3>
-                  <p class="step-text">A second review ensures accuracy with clinical considerations.</p>
-                  <div class="step-highlight">Multi-tier Quality Assurance and peer review audits for 100% precision.</div>
+                  <h3>Quality Check</h3>
+                  <p class="step-text">They validate correct findings, correct any errors, add clinical context, and finalise the report.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- ARROW 4 -> 5 -->
+          <!-- ARROW 4 -> PACS -->
           <div class="step-arrow-inline" title="Next Step">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </div>
 
-          <!-- STEP 5 -->
-          <div class="step-card-col">
-            <div class="step-flip-card" tabindex="0">
-              <div class="step-flip-inner">
-                <div class="step-flip-front">
-                  <div>
-                    <span class="step-num-badge active-badge" title="Report Delivered">
-                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
-                    </span>
-                    <div class="flip-title">5. Report Delivered</div>
-                  </div>
-                  <div class="flip-hint">
-                    <span>Hover</span>
-                    <svg class="flip-icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
-                  </div>
-                </div>
-                <div class="step-flip-back step-detail-card" style="border-color: rgba(43, 168, 183, 0.4);">
-                  <span class="step-num-badge active-badge">
-                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
-                  </span>
-                  <h3>5. Report Delivered</h3>
-                  <p class="step-text">The signed report is delivered with a direct query line to our system.</p>
-                  <div class="step-highlight">Pushed back to PACS with doctor-to-doctor direct consultation line.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ARROW 5 -> PACS -->
-          <div class="step-arrow-inline" title="Next Step">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </div>
-
-          <!-- PACS FEATURE CARD -->
+          <!-- STEP 5: REPORT DELIVERY -->
           <div class="step-card-col">
             <div class="step-flip-card" tabindex="0">
               <div class="step-flip-inner">
                 <div class="step-flip-front" style="background: linear-gradient(135deg, #0E2440 0%, #16355C 100%); color: #FFFFFF;">
                   <div>
-                    <span class="step-num-badge" style="background: rgba(255,255,255,0.15); color: #FFFFFF;" title="Fully Integrated PACS">
-                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4.03 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <span class="step-num-badge" style="background: rgba(255,255,255,0.15); color: #FFFFFF;" title="Report Delivery">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="M16 19h6"/><path d="M19 16v6"/></svg>
                     </span>
-                    <div class="flip-title" style="color: #FFFFFF;">Fully Integrated PACS</div>
+                    <div class="flip-title" style="color: #FFFFFF;">Report Delivery</div>
                   </div>
                   <div class="flip-hint" style="background: rgba(255,255,255,0.15); color: #E6EDF5;">
                     <span>Hover</span>
@@ -364,10 +327,10 @@ export const tahMarkup = `
                 </div>
                 <div class="step-flip-back step-detail-card" style="background: linear-gradient(135deg, #0E2440 0%, #16355C 100%); color: #FFFFFF;">
                   <span class="step-num-badge" style="background: rgba(255,255,255,0.15); color: #FFFFFF;">
-                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4.03 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"></path></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="M16 19h6"/><path d="M19 16v6"/></svg>
                   </span>
-                  <h3 style="color: #FFFFFF;">Fully Integrated PACS</h3>
-                  <p class="step-text" style="color: #D0DCED;">Hooks directly into DICOM feed to streamline report delivery.</p>
+                  <h3 style="color: #FFFFFF;">Report Delivery</h3>
+                  <p class="step-text" style="color: #D0DCED;">The finalised report is delivered directly to the referring clinician via the integrated PACS or secure portal — fast, accurate, and actionable.</p>
                   <div class="step-highlight" style="background: rgba(255,255,255,0.08); border-color: var(--teal); color: #E6EDF5;">Zero technical friction with IT support.</div>
                 </div>
               </div>
@@ -642,103 +605,107 @@ export const tahMarkup = `
         </div>
       </div>
 
-      <!-- WHY US — ALTERNATING FEATURE ROWS -->
-      <div class="why-features reveal-stagger">
-
-        <div class="why-feature-row">
-          <div class="why-feature-icon-col">
-            <div class="why-feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <!-- WHY US — 2 COLUMN FEATURE GRID -->
+      <div class="row g-4 why-features-grid reveal-stagger">
+        <div class="col-12 col-lg-6">
+          <div class="why-features h-100">
+            <div class="why-feature-row">
+              <div class="why-feature-icon-col">
+                <div class="why-feature-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <span class="why-feature-num">01</span>
+              </div>
+              <div class="why-feature-body">
+                <h4>Avoiding Queue Theory</h4>
+                <p>Your team has a direct contact for communication, not an ever-changing support inbox. Speak directly to radiologists when every minute matters.</p>
+              </div>
+              <div class="why-feature-tag">Direct Access</div>
             </div>
-            <span class="why-feature-num">01</span>
+
+            <div class="why-feature-divider"></div>
+
+            <div class="why-feature-row why-feature-row--alt">
+              <div class="why-feature-icon-col">
+                <div class="why-feature-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <span class="why-feature-num">02</span>
+              </div>
+              <div class="why-feature-body">
+                <h4>We&rsquo;ve Got Your Back</h4>
+                <p>We hold ourselves accountable for our promises. Strict turnaround time SLAs with guaranteed report completion times.</p>
+              </div>
+              <div class="why-feature-tag">SLA Guarantee</div>
+            </div>
+
+            <div class="why-feature-divider"></div>
+
+            <div class="why-feature-row">
+              <div class="why-feature-icon-col">
+                <div class="why-feature-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <span class="why-feature-num">03</span>
+              </div>
+              <div class="why-feature-body">
+                <h4>Large Radiology Network</h4>
+                <p>Your reports will not be delayed because of the unavailability of one radiologist. <span data-stat-val="radiologists">140+</span> subspecialty radiologists on call 24/7/365.</p>
+              </div>
+              <div class="why-feature-tag"><span data-stat-val="radiologists">140+</span> Specialists</div>
+            </div>
           </div>
-          <div class="why-feature-body">
-            <h4>Avoiding Queue Theory</h4>
-            <p>Your team has a direct contact for communication, not an ever-changing support inbox. Speak directly to radiologists when every minute matters.</p>
-          </div>
-          <div class="why-feature-tag">Direct Access</div>
         </div>
 
-        <div class="why-feature-divider"></div>
-
-        <div class="why-feature-row why-feature-row--alt">
-          <div class="why-feature-icon-col">
-            <div class="why-feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="col-12 col-lg-6">
+          <div class="why-features h-100">
+            <div class="why-feature-row why-feature-row--alt">
+              <div class="why-feature-icon-col">
+                <div class="why-feature-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <span class="why-feature-num">04</span>
+              </div>
+              <div class="why-feature-body">
+                <h4>Lots of Volume, Still Personal</h4>
+                <p>We have a responsive and dedicated team, and have reported over a million studies, with more to come while maintaining personal doctor rapport.</p>
+              </div>
+              <div class="why-feature-tag">1M+ Studies</div>
             </div>
-            <span class="why-feature-num">02</span>
-          </div>
-          <div class="why-feature-body">
-            <h4>We&rsquo;ve Got Your Back</h4>
-            <p>We hold ourselves accountable for our promises. Strict turnaround time SLAs with guaranteed report completion times.</p>
-          </div>
-          <div class="why-feature-tag">SLA Guarantee</div>
-        </div>
 
-        <div class="why-feature-divider"></div>
+            <div class="why-feature-divider"></div>
 
-        <div class="why-feature-row">
-          <div class="why-feature-icon-col">
-            <div class="why-feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <div class="why-feature-row">
+              <div class="why-feature-icon-col">
+                <div class="why-feature-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                </div>
+                <span class="why-feature-num">05</span>
+              </div>
+              <div class="why-feature-body">
+                <h4>Pioneer in Teleradiology</h4>
+                <p>Trusted partner for hospitals and imaging centers across India with multi-level quality assurance and cloud PACS workflow.</p>
+              </div>
+              <div class="why-feature-tag">Multi-Level QA</div>
             </div>
-            <span class="why-feature-num">03</span>
-          </div>
-          <div class="why-feature-body">
-            <h4>Large Radiology Network</h4>
-            <p>Your reports will not be delayed because of the unavailability of one radiologist. <span data-stat-val="radiologists">140+</span> subspecialty radiologists on call 24/7/365.</p>
-          </div>
-          <div class="why-feature-tag"><span data-stat-val="radiologists">140+</span> Specialists</div>
-        </div>
 
-        <div class="why-feature-divider"></div>
+            <div class="why-feature-divider"></div>
 
-        <div class="why-feature-row why-feature-row--alt">
-          <div class="why-feature-icon-col">
-            <div class="why-feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="why-feature-row why-feature-row--alt">
+              <div class="why-feature-icon-col">
+                <div class="why-feature-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                </div>
+                <span class="why-feature-num">06</span>
+              </div>
+              <div class="why-feature-body">
+                <h4>24/7 Direct Customer Support</h4>
+                <p>Never experience radio silence. Immediate escalation pathways and doctor-to-doctor consultation whenever critical findings emerge.</p>
+              </div>
+              <div class="why-feature-tag">Zero Silence</div>
             </div>
-            <span class="why-feature-num">04</span>
           </div>
-          <div class="why-feature-body">
-            <h4>Lots of Volume, Still Personal</h4>
-            <p>We have a responsive and dedicated team, and have reported over a million studies, with more to come while maintaining personal doctor rapport.</p>
-          </div>
-          <div class="why-feature-tag">1M+ Studies</div>
         </div>
-
-        <div class="why-feature-divider"></div>
-
-        <div class="why-feature-row">
-          <div class="why-feature-icon-col">
-            <div class="why-feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-            </div>
-            <span class="why-feature-num">05</span>
-          </div>
-          <div class="why-feature-body">
-            <h4>Pioneer in Teleradiology</h4>
-            <p>Trusted partner for hospitals and imaging centers across India with multi-level quality assurance and cloud PACS workflow.</p>
-          </div>
-          <div class="why-feature-tag">Multi-Level QA</div>
-        </div>
-
-        <div class="why-feature-divider"></div>
-
-        <div class="why-feature-row why-feature-row--alt">
-          <div class="why-feature-icon-col">
-            <div class="why-feature-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-            </div>
-            <span class="why-feature-num">06</span>
-          </div>
-          <div class="why-feature-body">
-            <h4>24/7 Direct Customer Support</h4>
-            <p>Never experience radio silence. Immediate escalation pathways and doctor-to-doctor consultation whenever critical findings emerge.</p>
-          </div>
-          <div class="why-feature-tag">Zero Silence</div>
-        </div>
-
       </div>
 
       <div class="text-center mt-4 pt-3 reveal">
@@ -869,9 +836,19 @@ export const tahMarkup = `
           <p>Ready to eliminate radiology reporting delays and give your clinical team direct radiologist access? Reach out to schedule a demo or set up your hospital workflow.</p>
           
           <div class="office">
-            <h4>REGISTERED OFFICE</h4>
+            <h4>REGISTERED OFFICE &amp; CONTACT</h4>
             <p>Trust and Hope Rad Pvt. Ltd.<br>India</p>
-            <p><strong>Direct Helpline:</strong> +91-XXXXX-XXXXX<br><strong>Email:</strong> contact@tahrad.com</p>
+            <p style="margin-bottom:12px;">
+              <strong>Call / Helpline:</strong> <a href="tel:+919741573222" style="color:var(--teal); font-weight:600; text-decoration:none;">+91 97415 73222</a><br>
+              <strong>WhatsApp:</strong> <a href="https://wa.link/sz5un4" target="_blank" rel="noopener noreferrer" style="color:#25D366; font-weight:600; text-decoration:none;">+91 97415 73222 (Chat Now &rarr;)</a><br>
+              <strong>Email:</strong> <a href="mailto:trustandhopeteleradiology@gmail.com" style="color:var(--teal); font-weight:600; text-decoration:none;">trustandhopeteleradiology@gmail.com</a>
+            </p>
+            <div class="contact-social-buttons d-flex flex-wrap gap-2 mt-3">
+              <a href="https://wa.link/sz5un4" target="_blank" rel="noopener noreferrer" class="btn-custom" style="background:#25D366; color:#fff; padding:7px 16px; font-size:13px; border-radius:30px; text-decoration:none;">WhatsApp</a>
+              <a href="https://www.facebook.com/profile.php?id=61550262965070&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="btn-custom btn-custom-ghost" style="padding:7px 16px; font-size:13px; border-radius:30px; text-decoration:none;">Facebook</a>
+              <a href="https://in.linkedin.com/company/trust-and-hope-rad?trk=public_post_feed-actor-name" target="_blank" rel="noopener noreferrer" class="btn-custom btn-custom-ghost" style="padding:7px 16px; font-size:13px; border-radius:30px; text-decoration:none;">LinkedIn</a>
+              <a href="https://instagram.com/trustandhopeteleradiology?utm_source=qr&igshid=NGExMmI2YTkyZg==" target="_blank" rel="noopener noreferrer" class="btn-custom btn-custom-ghost" style="padding:7px 16px; font-size:13px; border-radius:30px; text-decoration:none;">Instagram</a>
+            </div>
           </div>
         </div>
 
@@ -922,14 +899,36 @@ export const tahMarkup = `
 <footer>
   <div class="container">
     <div class="row g-4 g-lg-5">
-      <div class="col-12 col-lg-5 pe-lg-4">
+      <div class="col-12 col-lg-4 pe-lg-4">
         <a href="#hero" class="brand">
           <img src="${logoUrl}" alt="Trust and Hope Rad logo">
           <span>TAH RAD</span>
         </a>
         <p data-stat-summary>Trust and Hope Rad Pvt. Ltd. | 24×7 teleradiology services serving 350+ centres, 1000+ new studies uploaded daily to PACS, 140+ radiologists across specialisations, 15+ states covered in India.</p>
       </div>
-      <div class="col-6 col-lg-3 offset-lg-1">
+      <div class="col-6 col-md-4 col-lg-3">
+        <h5>Contact Us</h5>
+        <ul style="font-size: 13.5px;">
+          <li><strong>Call:</strong> <a href="tel:+919741573222">+91 97415 73222</a></li>
+          <li><strong>WhatsApp:</strong> <a href="https://wa.link/sz5un4" target="_blank" rel="noopener noreferrer" style="color:#25D366;">+91 97415 73222</a></li>
+          <li><strong>Mail:</strong> <a href="mailto:trustandhopeteleradiology@gmail.com" style="word-break:break-all;">trustandhopeteleradiology@gmail.com</a></li>
+        </ul>
+        <div class="topbar-socials mt-3">
+          <a href="https://www.facebook.com/profile.php?id=61550262965070&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="topbar-social-link fb-hover" title="Facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://in.linkedin.com/company/trust-and-hope-rad?trk=public_post_feed-actor-name" target="_blank" rel="noopener noreferrer" class="topbar-social-link li-hover" title="LinkedIn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-1.25.7-1.92 1.63-1.92.93 0 1.36.67 1.36 1.92v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </a>
+          <a href="https://instagram.com/trustandhopeteleradiology?utm_source=qr&igshid=NGExMmI2YTkyZg==" target="_blank" rel="noopener noreferrer" class="topbar-social-link ig-hover" title="Instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.link/sz5un4" target="_blank" rel="noopener noreferrer" class="topbar-social-link wa-hover" title="WhatsApp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.76.459 3.474 1.33 4.987l-1.414 5.163 5.286-1.386a9.96 9.96 0 004.787 1.22h.005c5.507 0 9.99-4.478 9.99-9.985 0-2.667-1.039-5.176-2.924-7.062A9.923 9.923 0 0012.012 2zm5.82 14.161c-.247.692-1.22 1.326-1.996 1.492-.533.113-1.229.206-3.567-.763-2.989-1.237-4.908-4.275-5.059-4.474-.148-.198-1.218-1.621-1.218-3.092 0-1.47.767-2.196 1.041-2.495.274-.298.599-.373.799-.373.199 0 .399.002.573.01.185.008.435-.07.68.518.248.598.847 2.068.921 2.217.075.149.124.323.025.522-.099.198-.149.322-.298.497-.149.174-.313.389-.447.523-.148.149-.303.311-.13.609.174.298.774 1.277 1.662 2.067 1.14 1.015 2.102 1.33 2.399 1.478.298.149.472.124.646-.075.174-.199.746-.87.945-1.168.199-.298.398-.248.671-.149.274.099 1.742.82 2.04 1.043.298.224.497.348.572.473.075.124.075.72-.172 1.412z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
         <h5>Navigate</h5>
         <ul>
           <li><a href="#who-we-are">About Us</a></li>
@@ -961,4 +960,9 @@ export const tahMarkup = `
 </footer>
 
 <button id="back-to-top" aria-label="Back to Top">↑</button>
+
+<a href="https://wa.link/sz5un4" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.76.459 3.474 1.33 4.987l-1.414 5.163 5.286-1.386a9.96 9.96 0 004.787 1.22h.005c5.507 0 9.99-4.478 9.99-9.985 0-2.667-1.039-5.176-2.924-7.062A9.923 9.923 0 0012.012 2zm5.82 14.161c-.247.692-1.22 1.326-1.996 1.492-.533.113-1.229.206-3.567-.763-2.989-1.237-4.908-4.275-5.059-4.474-.148-.198-1.218-1.621-1.218-3.092 0-1.47.767-2.196 1.041-2.495.274-.298.599-.373.799-.373.199 0 .399.002.573.01.185.008.435-.07.68.518.248.598.847 2.068.921 2.217.075.149.124.323.025.522-.099.198-.149.322-.298.497-.149.174-.313.389-.447.523-.148.149-.303.311-.13.609.174.298.774 1.277 1.662 2.067 1.14 1.015 2.102 1.33 2.399 1.478.298.149.472.124.646-.075.174-.199.746-.87.945-1.168.199-.298.398-.248.671-.149.274.099 1.742.82 2.04 1.043.298.224.497.348.572.473.075.124.075.72-.172 1.412z"/></svg>
+  <span>Chat on WhatsApp</span>
+</a>
 `;
